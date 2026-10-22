@@ -1,0 +1,947 @@
+{
+  "id": "fm2-cards",
+  "name": "FM 2 Cards",
+  "version": "0.1",
+  "author": "FM 2",
+  "description": "FM 2 cards, batch 1: the Ember line. Ten new fire cards built to be fused (Ash Sparrow + Spark Beetle -> Ashfeather Hawk -> ... -> Solar Phoenix Dragon). Artwork is the base card's until the final art is made.",
+  "enabled": true,
+  "min_api": 16,
+  "game": "slus_01411",
+  "cards": [
+    {
+      "id": "pebble-raptor",
+      "copy": 105,
+      "name": "Pebble Raptor",
+      "type": "Dinosaur",
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Saturn",
+        "Moon"
+      ],
+      "attack": 700,
+      "defense": 500,
+      "description": "A small raptor that\nnests in warm ash\nand cracked stone.",
+      "drops": false
+    },
+    {
+      "id": "spark-beetle",
+      "copy": 53,
+      "name": "Spark Beetle",
+      "type": "Insect",
+      "attribute": "Fire",
+      "level": 2,
+      "stars": [
+        "Mars",
+        "Mercury"
+      ],
+      "attack": 600,
+      "defense": 500,
+      "description": "Its wings leave a\ntrail of sparks. It\nis the seed of the\nEmber line.",
+      "drops": false
+    },
+    {
+      "id": "ash-sparrow",
+      "copy": 207,
+      "name": "Ash Sparrow",
+      "type": "Winged Beast",
+      "attribute": "Fire",
+      "level": 2,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "attack": 700,
+      "defense": 400,
+      "description": "Born from the embers\nof a dead volcano.",
+      "drops": false
+    },
+    {
+      "id": "ember-kindler",
+      "copy": 106,
+      "name": "Ember Kindler",
+      "type": "Spellcaster",
+      "attribute": "Fire",
+      "level": 3,
+      "stars": [
+        "Sun",
+        "Mars"
+      ],
+      "attack": 900,
+      "defense": 900,
+      "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+200 ATK.\nFusion: Ash Sparrow\n+ Pebble Raptor",
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attribute": "Fire",
+          "attack": 200
+        }
+      ]
+    },
+    {
+      "id": "ashfeather-hawk",
+      "copy": 581,
+      "name": "Ashfeather Hawk",
+      "type": "Winged Beast",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "attack": 1400,
+      "defense": 1000,
+      "description": "Fusion: Ash Sparrow\n+ Spark Beetle",
+      "drops": false
+    },
+    {
+      "id": "magma-raptor",
+      "copy": 80,
+      "name": "Magma Raptor",
+      "type": "Dinosaur",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Saturn"
+      ],
+      "attack": 1500,
+      "defense": 900,
+      "description": "Fusion: Pebble Raptor\n+ Spark Beetle",
+      "drops": false
+    },
+    {
+      "id": "blazing-wyvern",
+      "copy": 383,
+      "name": "Blazing Wyvern",
+      "type": "Dragon",
+      "attribute": "Fire",
+      "level": 6,
+      "stars": [
+        "Mars",
+        "Jupiter"
+      ],
+      "attack": 1900,
+      "defense": 1500,
+      "description": "Fusion: Ashfeather\nHawk + Magma Raptor",
+      "drops": false
+    },
+    {
+      "id": "obsidian-colossus",
+      "copy": 531,
+      "name": "Obsidian Colossus",
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Saturn",
+        "Mars"
+      ],
+      "attack": 1800,
+      "defense": 2300,
+      "description": "Fusion: Magma\nRaptor + Ember\nKindler",
+      "drops": false
+    },
+    {
+      "id": "caldera-drake",
+      "copy": 571,
+      "name": "Caldera Drake",
+      "type": "Dragon",
+      "attribute": "Fire",
+      "level": 7,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "attack": 2400,
+      "defense": 1900,
+      "description": "{f8 0A 05}<Destroyed>{f8 0A 00} Deals 600\ndamage to the opponent.\nFusion: Blazing\nWyvern + Obsidian\nColossus",
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "destroyed",
+          "do": "damage",
+          "amount": 600
+        }
+      ]
+    },
+    {
+      "id": "solar-phoenix-dragon",
+      "copy": 713,
+      "name": "Solar Phoenix Dragon",
+      "type": "Dragon",
+      "attribute": "Fire",
+      "level": 8,
+      "stars": [
+        "Sun",
+        "Mars"
+      ],
+      "attack": 2900,
+      "defense": 2300,
+      "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+300 ATK and DEF.\n{f8 0A 05}<Destroyed>{f8 0A 00} Deals\n800 damage.\nFusion: Caldera Drake\n+ Crimson Sunbird",
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attribute": "Fire",
+          "attack": 300,
+          "defense": 300
+        },
+        {
+          "when": "destroyed",
+          "do": "damage",
+          "amount": 800
+        }
+      ]
+    }
+  ],
+  "fusions": [
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        124
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        275
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        283
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        286
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        297
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        355
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        388
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        394
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        405
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        406
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        408
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        410
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        411
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        412
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        413
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        414
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        416
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        417
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        418
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        419
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        420
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        421
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        422
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        423
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        438
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        512
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        513
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        514
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        544
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        557
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        580
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        585
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        643
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        648
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:spark-beetle:1",
+        480
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        5
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        15
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        68
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        89
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        165
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        177
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        193
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        272
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        291
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        390
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        407
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        449
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        473
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        503
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        518
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        519
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        593
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        714
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        15
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        40
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        68
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        101
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        133
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        142
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        154
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        157
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        165
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        172
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        176
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        210
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        214
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        215
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        242
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        244
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        272
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        291
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        390
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        407
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        417
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        473
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        519
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        644
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        714
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        45
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        191
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        211
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        371
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        458
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        459
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        460
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        461
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        462
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        463
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        537
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        610
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        "fm2-cards:pebble-raptor:1"
+      ],
+      "result": "fm2-cards:ember-kindler:1"
+    },
+    {
+      "with": [
+        "fm2-cards:ash-sparrow:1",
+        "fm2-cards:spark-beetle:1"
+      ],
+      "result": "fm2-cards:ashfeather-hawk:1"
+    },
+    {
+      "with": [
+        "fm2-cards:pebble-raptor:1",
+        "fm2-cards:spark-beetle:1"
+      ],
+      "result": "fm2-cards:magma-raptor:1"
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        "fm2-cards:magma-raptor:1"
+      ],
+      "result": "fm2-cards:blazing-wyvern:1"
+    },
+    {
+      "with": [
+        "fm2-cards:magma-raptor:1",
+        "fm2-cards:ember-kindler:1"
+      ],
+      "result": "fm2-cards:obsidian-colossus:1"
+    },
+    {
+      "with": [
+        "fm2-cards:blazing-wyvern:1",
+        "fm2-cards:obsidian-colossus:1"
+      ],
+      "result": "fm2-cards:caldera-drake:1"
+    },
+    {
+      "with": [
+        "fm2-cards:caldera-drake:1",
+        467
+      ],
+      "result": "fm2-cards:solar-phoenix-dragon:1"
+    }
+  ]
+}

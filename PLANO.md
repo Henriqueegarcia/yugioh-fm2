@@ -47,7 +47,7 @@ Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-cat
 
 - [x] Pesquisar mods da comunidade como referência de balanceamento (`docs/fm2-pesquisa-balanceamento.md`)
 - [~] Escrever as **regras de balanceamento** (seção abaixo) e validar com o usuário (rascunho pronto, falta validar)
-- [ ] Primeiro lote: ~10 cartas + algumas fusões em `mods/fm2-cards/`, com arte provisória
+- [~] Primeiro lote: ~10 cartas + algumas fusões em `mods/fm2-cards/`, com arte provisória (feito: linha Ember, `docs/fm2-lote1-ember.md`; falta testar em duelo)
 - [ ] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2
 - [ ] Testar em duelo, ajustar números, depois expandir em lotes
 - [ ] Arte final das cartas (PNG 102x96, ou 408x384 para HD)
