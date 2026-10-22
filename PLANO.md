@@ -24,11 +24,11 @@ Legenda: `[ ]` a fazer · `[~]` em andamento · `[x]` feito
 - [x] Fork `Henriqueufu/yugioh-fm2` criado
 - [x] Imagem do disco USA validada (SHA-256 confere) e jogo rodando com `play.bat`
 - [x] `CLAUDE.md` e `PLANO.md` no repositório
-- [ ] Migrar a execução para o **Claude Code no Windows** (pasta `C:\Users\henri\yugioh-fm2`)
-- [ ] Adicionar remote `upstream` → `https://github.com/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled`
-- [ ] Criar branch `fm2` (desenvolvimento) e manter `master` = upstream
-- [ ] Criar save de teste (início da campanha) e guardar cópia de backup
-- [ ] Definir e rodar o **smoke test** (abaixo) uma vez no jogo sem mods do FM 2
+- [x] Migrar a execução para o **Claude Code no Windows** (pasta `C:\Users\henri\yugioh-fm2`)
+- [x] Adicionar remote `upstream` → `https://github.com/Unchiga/Yu-Gi-Oh-Forbidden-Memories-Recompiled`
+- [x] Criar branch `fm2` (desenvolvimento) e manter `master` = upstream
+- [x] Criar save de teste (início da campanha) e guardar cópia de backup (em `C:\Users\henri\fm2-backups\`, fora do repo)
+- [x] Definir e rodar o **smoke test** (abaixo) uma vez no jogo sem mods do FM 2
 
 ### Smoke test (rodar depois de toda mudança)
 
