@@ -12,10 +12,10 @@ Legenda: `[ ]` a fazer · `[~]` em andamento · `[x]` feito
 
 | # | Objetivo | Viabilidade | Como |
 |---|----------|-------------|------|
-| 4 | NPCs que dão cartas intermediárias | ✅ Fácil | Mod de dados: duelistas novos (deck, drops, retrato, AI, condição de liberação) |
-| 2 | Cartas e fusões novas, balanceadas | ✅ Viável | Mod de dados: `cards` (IDs > 722) + tabelas de fusão/drops. Limite: carta nova copia uma original e herda o **modelo 3D** dela; precisa de **arte** própria |
+| 1 | Cartas e fusões novas, balanceadas | ✅ Viável | Mod de dados: `cards` (IDs > 722) + tabelas de fusão/drops. Limite: carta nova copia uma original e herda o **modelo 3D** dela; precisa de **arte** própria |
+| 2 | NPCs que dão cartas intermediárias | ✅ Fácil | Mod de dados: duelistas novos (deck, drops, retrato, AI, condição de liberação) |
 | 3 | Loja de cartas melhor que a de StarChips | 🟡 Parcial | Booster packs já existem (raridade, pity, estoque, desbloqueio). Compra direta / venda / troca exigem **mod em código** |
-| 1 | Navegação 2D estilo Stardew Valley | 🔴 Grande | Mod em código substituindo/complementando o mapa. Precisa de **arte** (tileset/sprites livres, ex. CC0) e cuidado com flags da campanha |
+| 4 | Navegação 2D estilo Stardew Valley | 🔴 Grande | Mod em código substituindo/complementando o mapa. Precisa de **arte** (tileset/sprites livres, ex. CC0) e cuidado com flags da campanha |
 
 ---
 
@@ -41,24 +41,14 @@ Legenda: `[ ]` a fazer · `[~]` em andamento · `[x]` feito
 
 ---
 
-## Fase 1 — NPCs intermediários (objetivo 4)
-
-Referências: `notes/more-duelists.md`, `notes/tower-mode.md`, `notes/card-drops.md`.
-
-- [ ] Mapear a progressão da campanha: ordem dos duelos principais e "saltos" de dificuldade
-- [ ] Definir os degraus: entre quais duelos entra cada NPC e qual faixa de cartas ele dá
-- [ ] Criar o mod `mods/fm2-duelists/` com 3–4 duelistas (deck, drops, retrato, condição de liberação)
-- [ ] Calibrar: o NPC deve ajudar a passar o próximo chefe, não substituí-lo
-- [ ] Rodar a progressão do começo até o primeiro chefe com os NPCs
-
-## Fase 2 — Cartas e fusões novas (objetivo 2)
+## Fase 1 — Cartas e fusões novas (objetivo 2)
 
 Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-catalog.csv`, `mods/yamyi-mods`.
 
 - [ ] Pesquisar mods da comunidade como referência de balanceamento
 - [ ] Escrever as **regras de balanceamento** (seção abaixo) e validar com o usuário
 - [ ] Primeiro lote: ~10 cartas + algumas fusões em `mods/fm2-cards/`, com arte provisória
-- [ ] Colocar as cartas novas nos drops dos NPCs da Fase 1
+- [ ] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2
 - [ ] Testar em duelo, ajustar números, depois expandir em lotes
 - [ ] Arte final das cartas (PNG 102x96, ou 408x384 para HD)
 
@@ -68,6 +58,16 @@ Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-cat
 - Fusão nova não pode gerar carta acima do tier dos materiais + 1.
 - Nenhuma carta nova com ATK maior que as cartas de fim de jogo equivalentes.
 - Drops de cartas fortes com peso baixo; nada de "carta quebrada" logo no começo.
+
+## Fase 2 — NPCs intermediários (objetivo 4)
+
+Referências: `notes/more-duelists.md`, `notes/tower-mode.md`, `notes/card-drops.md`.
+
+- [ ] Mapear a progressão da campanha: ordem dos duelos principais e "saltos" de dificuldade
+- [ ] Definir os degraus: entre quais duelos entra cada NPC e qual faixa de cartas ele dá
+- [ ] Criar o mod `mods/fm2-duelists/` com 3–4 duelistas (deck, drops, retrato, condição de liberação), usando as cartas novas da Fase 1
+- [ ] Calibrar: o NPC deve ajudar a passar o próximo chefe, não substituí-lo
+- [ ] Rodar a progressão do começo até o primeiro chefe com os NPCs
 
 ## Fase 3 — Loja (objetivo 3)
 
@@ -84,7 +84,7 @@ Referências: `notes/modding.md` (Code mods, API 4: substituir/envolver funçõe
 
 - [ ] Escolher arte: tileset e sprites livres (CC0) ou arte própria. **Não** usar assets do Stardew
 - [ ] Prova de conceito: tela 2D aberta por um item do menu, personagem andando com colisão
-- [ ] NPCs no mapa: interagir → diálogo → iniciar duelo (reaproveitando os duelistas da Fase 1)
+- [ ] NPCs no mapa: interagir → diálogo → iniciar duelo (reaproveitando os duelistas da Fase 2)
 - [ ] Ligar ao progresso da campanha (flags/save) sem quebrar a história original
 - [ ] Decidir: substituir o mapa original ou manter as duas navegações
 - [ ] Mais mapas, música, polimento
@@ -93,6 +93,7 @@ Referências: `notes/modding.md` (Code mods, API 4: substituir/envolver funçõe
 
 ## Decisões registradas
 
+- 2026-10-22 — Cartas novas vêm antes dos NPCs (fases 1 e 2 trocadas), para os duelistas novos já usarem as cartas.
 - 2026-10-22 — Base do projeto: fork do port decompilado da Unchiga (não usar REA / engenharia reversa do zero).
 - 2026-10-22 — Repositório na conta `Henriqueufu`; conta `cadulugaresi` fica para a faculdade (colaboradora do repo).
 - 2026-10-22 — Execução do desenvolvimento pelo Claude Code no Windows; planejamento no projeto "Criação de jogo" do claude.ai.
