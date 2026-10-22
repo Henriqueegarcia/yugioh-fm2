@@ -11,19 +11,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "mods" / "fm2-cards" / "images"
 W, H = 408, 384  # 4x o tamanho de 102x96 (a arte HD do jogo)
 
-# id -> (cor de cima, cor de baixo, tier)
-ART = {
-    "pebble-raptor":        ((176, 132, 84), (84, 56, 34), 1),
-    "spark-beetle":         ((255, 214, 70), (176, 96, 20), 1),
-    "ash-sparrow":          ((200, 190, 180), (96, 70, 60), 1),
-    "ember-kindler":        ((236, 92, 168), (112, 24, 90), 2),
-    "ashfeather-hawk":      ((255, 150, 60), (150, 54, 20), 2),
-    "magma-raptor":         ((226, 72, 40), (100, 24, 16), 2),
-    "blazing-wyvern":       ((240, 40, 40), (90, 10, 24), 3),
-    "obsidian-colossus":    ((120, 90, 170), (20, 14, 40), 3),
-    "caldera-drake":        ((210, 20, 60), (60, 0, 20), 4),
-    "solar-phoenix-dragon": ((255, 232, 120), (230, 100, 10), 5),
-}
+from gen_cards import CARDS  # cada carta traz colors=(cor de cima, cor de baixo) e tier
 
 
 def lerp(a, b, t):
@@ -61,9 +49,10 @@ def png(data):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, (top, bottom, tier) in ART.items():
-        (OUT / f"{name}.png").write_bytes(png(render(top, bottom, tier)))
-    print(f"{len(ART)} images -> {OUT}")
+    for c in CARDS:
+        top, bottom = c["colors"]
+        (OUT / f"{c['id']}.png").write_bytes(png(render(top, bottom, c["tier"])))
+    print(f"{len(CARDS)} images -> {OUT}")
 
 
 if __name__ == "__main__":

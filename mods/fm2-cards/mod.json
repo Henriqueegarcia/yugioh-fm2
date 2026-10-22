@@ -3,7 +3,7 @@
   "name": "FM 2 Cards",
   "version": "0.1",
   "author": "FM 2",
-  "description": "FM 2 cards, batch 1: the Ember line. Ten new fire cards built to be fused (Ash Sparrow + Spark Beetle -> Ashfeather Hawk -> ... -> Solar Phoenix Dragon). Placeholder artwork (gradient + tier dots) until the final art is made.",
+  "description": "FM 2 cards: the Ember, Tide and Grove lines, new cards built to be fused from weak cards into strong ones. Placeholder artwork (gradient + tier dots) until the final art is made.",
   "enabled": true,
   "min_api": 16,
   "game": "slus_01411",
@@ -236,6 +236,454 @@
           "when": "destroyed",
           "do": "damage",
           "amount": 800
+        }
+      ]
+    },
+    {
+      "id": "foam-sprite",
+      "copy": 444,
+      "name": "Foam Sprite",
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 2,
+      "stars": [
+        "Neptune",
+        "Mercury"
+      ],
+      "attack": 500,
+      "defense": 600,
+      "description": "A shy spirit made of\nsea foam. It pops\nwhen it laughs.",
+      "art": "images/foam-sprite.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "reef-crab",
+      "copy": 451,
+      "name": "Reef Crab",
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Saturn"
+      ],
+      "attack": 800,
+      "defense": 900,
+      "description": "Its shell is built\nfrom coral and\nstubbornness.",
+      "art": "images/reef-crab.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "brine-eel",
+      "copy": 475,
+      "name": "Brine Eel",
+      "type": "Sea Serpent",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "attack": 800,
+      "defense": 500,
+      "description": "It hunts in the dark\nwater under the reef.",
+      "art": "images/brine-eel.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "tide-priestess",
+      "copy": 525,
+      "name": "Tide Priestess",
+      "type": "Spellcaster",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Neptune"
+      ],
+      "attack": 800,
+      "defense": 1000,
+      "description": "{f8 0A 05}<Draw>{f8 0A 00} Restores 300 LP at\nthe start of your turn.\nFusion: Foam Sprite\n+ Reef Crab",
+      "art": "images/tide-priestess.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "draw",
+          "do": "heal",
+          "amount": 300
+        }
+      ]
+    },
+    {
+      "id": "coral-guardian",
+      "copy": 71,
+      "name": "Coral Guardian",
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Saturn"
+      ],
+      "attack": 1200,
+      "defense": 1500,
+      "description": "Fusion: Reef Crab\n+ Brine Eel",
+      "art": "images/coral-guardian.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "razor-barracuda",
+      "copy": 60,
+      "name": "Razor Barracuda",
+      "type": "Fish",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Mars"
+      ],
+      "attack": 1500,
+      "defense": 800,
+      "description": "Fusion: Brine Eel\n+ Foam Sprite",
+      "art": "images/razor-barracuda.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "deepwater-serpent",
+      "copy": 442,
+      "name": "Deepwater Serpent",
+      "type": "Sea Serpent",
+      "attribute": "Water",
+      "level": 6,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "attack": 1900,
+      "defense": 1500,
+      "description": "Fusion: Razor\nBarracuda + Brine Eel",
+      "art": "images/deepwater-serpent.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "abyssal-nautilus",
+      "copy": 639,
+      "name": "Abyssal Nautilus",
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Uranus"
+      ],
+      "attack": 1700,
+      "defense": 2000,
+      "description": "Fusion: Coral Guardian\n+ Armored Starfish",
+      "art": "images/abyssal-nautilus.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "tidal-leviathan",
+      "copy": 718,
+      "name": "Tidal Leviathan",
+      "type": "Fish",
+      "attribute": "Water",
+      "level": 7,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "attack": 2300,
+      "defense": 2000,
+      "description": "{f8 0A 05}<Battle>{f8 0A 00} The monster it\nfights loses 300 ATK.\nFusion: Deepwater\nSerpent + Abyssal\nNautilus",
+      "art": "images/tidal-leviathan.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "combat",
+          "do": "boost",
+          "target": "battle",
+          "attack": -300
+        }
+      ]
+    },
+    {
+      "id": "maelstrom-serpent",
+      "copy": 223,
+      "name": "Maelstrom Serpent",
+      "type": "Sea Serpent",
+      "attribute": "Water",
+      "level": 7,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "attack": 2200,
+      "defense": 1700,
+      "description": "{f8 0A 05}<Victory>{f8 0A 00} Restores 500 LP\nwhen it destroys a\nmonster.\nFusion: Abyssal\nNautilus + Giant Red\nSeasnake",
+      "art": "images/maelstrom-serpent.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "destroy_opponent",
+          "do": "heal",
+          "amount": 500
+        }
+      ]
+    },
+    {
+      "id": "leaf-grub",
+      "copy": 499,
+      "name": "Leaf Grub",
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 1,
+      "stars": [
+        "Mercury",
+        "Saturn"
+      ],
+      "attack": 300,
+      "defense": 500,
+      "description": "It eats one leaf a\nday and dreams of\nwings.",
+      "art": "images/leaf-grub.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "thorn-sprout",
+      "copy": 123,
+      "name": "Thorn Sprout",
+      "type": "Plant",
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "attack": 600,
+      "defense": 500,
+      "description": "A seedling armed\nwith tiny thorns.",
+      "art": "images/thorn-sprout.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "mossback-beetle",
+      "copy": 479,
+      "name": "Mossback Beetle",
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Mercury"
+      ],
+      "attack": 800,
+      "defense": 900,
+      "description": "Moss grows on its\nback, so the forest\nhides it well.",
+      "art": "images/mossback-beetle.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "bramble-mantis",
+      "copy": 535,
+      "name": "Bramble Mantis",
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Mars"
+      ],
+      "attack": 1300,
+      "defense": 1000,
+      "description": "Fusion: Leaf Grub\n+ Mossback Beetle",
+      "art": "images/bramble-mantis.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "grove-warden",
+      "copy": 511,
+      "name": "Grove Warden",
+      "type": "Plant",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "attack": 1200,
+      "defense": 1500,
+      "description": "Fusion: Thorn Sprout\n+ Leaf Grub",
+      "art": "images/grove-warden.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "spore-shaman",
+      "copy": 619,
+      "name": "Spore Shaman",
+      "type": "Spellcaster",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Moon"
+      ],
+      "attack": 900,
+      "defense": 800,
+      "description": "{f8 0A 05}<Battle>{f8 0A 00} Gets +300 ATK\nwhile it fights.\nFusion: Thorn Sprout\n+ Mossback Beetle",
+      "art": "images/spore-shaman.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "combat",
+          "do": "boost",
+          "target": "self",
+          "attack": 300
+        }
+      ]
+    },
+    {
+      "id": "hornet-duke",
+      "copy": 614,
+      "name": "Hornet Duke",
+      "type": "Insect",
+      "attribute": "Wind",
+      "level": 5,
+      "stars": [
+        "Mercury",
+        "Jupiter"
+      ],
+      "attack": 1800,
+      "defense": 1400,
+      "description": "Fusion: Bramble\nMantis + Killer Needle",
+      "art": "images/hornet-duke.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "ancient-treant",
+      "copy": 594,
+      "name": "Ancient Treant",
+      "type": "Plant",
+      "attribute": "Earth",
+      "level": 5,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "attack": 1700,
+      "defense": 2200,
+      "description": "Fusion: Grove Warden\n+ Spore Shaman",
+      "art": "images/ancient-treant.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "emperor-scarab",
+      "copy": 717,
+      "name": "Emperor Scarab",
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Mercury",
+        "Sun"
+      ],
+      "attack": 2300,
+      "defense": 2000,
+      "description": "{f8 0A 05}<Battle>{f8 0A 00} Gets +300 ATK\nwhile it fights.\nFusion: Hornet Duke\n+ Leaf Grub",
+      "art": "images/emperor-scarab.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "combat",
+          "do": "boost",
+          "target": "self",
+          "attack": 300
+        }
+      ]
+    },
+    {
+      "id": "world-tree-guardian",
+      "copy": 638,
+      "name": "World Tree Guardian",
+      "type": "Plant",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "attack": 2200,
+      "defense": 2300,
+      "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nPLANT monsters get\n+200 ATK and DEF.\nFusion: Ancient\nTreant + Thorn Sprout",
+      "art": "images/world-tree-guardian.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false,
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "type": "Plant",
+          "attack": 200,
+          "defense": 200
         }
       ]
     }
@@ -936,6 +1384,1441 @@
     },
     {
       "with": [
+        "fm2-cards:foam-sprite:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        97
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        138
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        275
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        545
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        97
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        138
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        275
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        545
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:brine-eel:1",
+        95
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:brine-eel:1",
+        98
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:brine-eel:1",
+        275
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        45
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        191
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        211
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        371
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        458
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        459
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        460
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        461
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        462
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        463
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        537
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        610
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:leaf-grub:1",
+        480
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        2
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        30
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        36
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        39
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        46
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        47
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        61
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        62
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        65
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        73
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        91
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        96
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        97
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        98
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        109
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        113
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        121
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        128
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        129
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        132
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        180
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        188
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        189
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        192
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        201
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        202
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        215
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        216
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        228
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        234
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        239
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        241
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        243
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        248
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        249
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        251
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        252
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        253
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        255
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        260
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        266
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        280
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        282
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        299
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        351
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        352
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        359
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        363
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        368
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        383
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        386
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        395
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        403
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        424
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        426
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        428
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        429
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        430
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        431
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        432
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        433
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        434
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        435
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        443
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        470
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        481
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        494
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        527
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        528
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        530
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        539
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        545
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        574
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        592
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        596
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        597
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        598
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        600
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        604
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        612
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        621
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        622
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        625
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        626
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        628
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        629
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        631
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        635
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        641
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        642
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        649
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        712
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:mossback-beetle:1",
+        480
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        39
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        73
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        138
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        383
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        386
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        424
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        426
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        443
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        712
+      ],
+      "result": null
+    },
+    {
+      "with": [
         "fm2-cards:ash-sparrow:1",
         "fm2-cards:pebble-raptor:1"
       ],
@@ -982,6 +2865,104 @@
         467
       ],
       "result": "fm2-cards:solar-phoenix-dragon:1"
+    },
+    {
+      "with": [
+        "fm2-cards:foam-sprite:1",
+        "fm2-cards:reef-crab:1"
+      ],
+      "result": "fm2-cards:tide-priestess:1"
+    },
+    {
+      "with": [
+        "fm2-cards:reef-crab:1",
+        "fm2-cards:brine-eel:1"
+      ],
+      "result": "fm2-cards:coral-guardian:1"
+    },
+    {
+      "with": [
+        "fm2-cards:brine-eel:1",
+        "fm2-cards:foam-sprite:1"
+      ],
+      "result": "fm2-cards:razor-barracuda:1"
+    },
+    {
+      "with": [
+        "fm2-cards:razor-barracuda:1",
+        "fm2-cards:brine-eel:1"
+      ],
+      "result": "fm2-cards:deepwater-serpent:1"
+    },
+    {
+      "with": [
+        "fm2-cards:coral-guardian:1",
+        615
+      ],
+      "result": "fm2-cards:abyssal-nautilus:1"
+    },
+    {
+      "with": [
+        "fm2-cards:deepwater-serpent:1",
+        "fm2-cards:abyssal-nautilus:1"
+      ],
+      "result": "fm2-cards:tidal-leviathan:1"
+    },
+    {
+      "with": [
+        "fm2-cards:abyssal-nautilus:1",
+        447
+      ],
+      "result": "fm2-cards:maelstrom-serpent:1"
+    },
+    {
+      "with": [
+        "fm2-cards:leaf-grub:1",
+        "fm2-cards:mossback-beetle:1"
+      ],
+      "result": "fm2-cards:bramble-mantis:1"
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        "fm2-cards:leaf-grub:1"
+      ],
+      "result": "fm2-cards:grove-warden:1"
+    },
+    {
+      "with": [
+        "fm2-cards:thorn-sprout:1",
+        "fm2-cards:mossback-beetle:1"
+      ],
+      "result": "fm2-cards:spore-shaman:1"
+    },
+    {
+      "with": [
+        "fm2-cards:bramble-mantis:1",
+        53
+      ],
+      "result": "fm2-cards:hornet-duke:1"
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        "fm2-cards:spore-shaman:1"
+      ],
+      "result": "fm2-cards:ancient-treant:1"
+    },
+    {
+      "with": [
+        "fm2-cards:hornet-duke:1",
+        "fm2-cards:leaf-grub:1"
+      ],
+      "result": "fm2-cards:emperor-scarab:1"
+    },
+    {
+      "with": [
+        "fm2-cards:ancient-treant:1",
+        "fm2-cards:thorn-sprout:1"
+      ],
+      "result": "fm2-cards:world-tree-guardian:1"
     }
   ]
 }
