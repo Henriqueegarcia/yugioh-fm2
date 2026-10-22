@@ -119,6 +119,7 @@ def main():
         entry = {k: c[k] for k in ("id", "copy", "name", "type", "attribute", "level", "stars",
                                     "attack", "defense", "description")}
         entry["art"] = f"images/{c['id']}.png"
+        entry["tags"] = [f"tier{c['tier']}"]
         entry["drops"] = False
         if "monster_effects" in c:
             entry["monster_effects"] = c["monster_effects"]

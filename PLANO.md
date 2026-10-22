@@ -47,7 +47,11 @@ Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-cat
 
 - [x] Pesquisar mods da comunidade como referência de balanceamento (`docs/fm2-pesquisa-balanceamento.md`)
 - [~] Escrever as **regras de balanceamento** (seção abaixo) e validar com o usuário (rascunho pronto, falta validar)
-- [~] Primeiro lote: ~10 cartas + algumas fusões em `mods/fm2-cards/`, com arte provisória (feito: linha Ember, `docs/fm2-lote1-ember.md`; falta testar em duelo)
+- [x] Primeiro lote: linha Ember, 10 cartas + 7 fusões em `mods/fm2-cards/`, arte provisória (`docs/fm2-lote1-ember.md`), testado no jogo
+- [x] Verificador de balanceamento (`tools/fm2/check_balance.py`), com o limite de cartas do baralho
+- [ ] Expandir (plano aprovado): **4 blocos-base** de ~10 cartas, de T1 até ~2300 ATK (o Ember é o 1º; faltam 3 com temas diferentes do fogo)
+- [ ] **2 cartas T5** mais fortes, criadas só misturando cartas dos blocos (receita com cartas de blocos diferentes)
+- [ ] **~4 cartas híbridas** que misturam cartas novas com cartas originais
 - [ ] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2
 - [ ] Testar em duelo, ajustar números, depois expandir em lotes
 - [ ] Arte final das cartas (PNG 102x96, ou 408x384 para HD)
@@ -74,6 +78,7 @@ Base dos números: `docs/fm2-pesquisa-balanceamento.md`.
 6. Drops: carta do tier atual com peso 8–40 em 2048 (0,4%–2%); carta do tier seguinte com peso ≤ 10; T4 e T5 só em duelistas do fim. Nenhuma carta T3+ em drops de duelista do começo.
 7. Magia/armadilha nova precisa de `ai_effect` para a IA usá-la; o dano/cura segue os valores da regra 3.
 8. Todo lote novo é testado em duelo (como jogador e como oponente) antes do próximo.
+9. **Limite de cartas no baralho** (baralho de 40, no máx. 3 cópias de cada, mão de 5): o resultado de uma fusão não vai para a coleção e uma cadeia usa só a mão e 1 monstro do campo. Por isso cada carta feita por fusão tem teto de **cartas exigidas**: T2 ≤ 2, T3 ≤ 3, T4 ≤ 4, T5 ≤ 6; nenhuma carta exigida mais de 3 vezes. Se as duas entradas de uma receita forem fusões, uma delas precisa existir como carta real (com drop). `python tools/fm2/check_balance.py` confere tudo isso e deve passar antes de cada lote.
 
 
 ## Fase 2 — NPCs intermediários (objetivo 2)

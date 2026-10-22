@@ -23,6 +23,9 @@
       "defense": 500,
       "description": "A small raptor that\nnests in warm ash\nand cracked stone.",
       "art": "images/pebble-raptor.png",
+      "tags": [
+        "tier1"
+      ],
       "drops": false
     },
     {
@@ -40,6 +43,9 @@
       "defense": 500,
       "description": "Its wings leave a\ntrail of sparks. It\nis the seed of the\nEmber line.",
       "art": "images/spark-beetle.png",
+      "tags": [
+        "tier1"
+      ],
       "drops": false
     },
     {
@@ -57,6 +63,9 @@
       "defense": 400,
       "description": "Born from the embers\nof a dead volcano.",
       "art": "images/ash-sparrow.png",
+      "tags": [
+        "tier1"
+      ],
       "drops": false
     },
     {
@@ -74,6 +83,9 @@
       "defense": 900,
       "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+200 ATK.\nFusion: Ash Sparrow\n+ Pebble Raptor",
       "art": "images/ember-kindler.png",
+      "tags": [
+        "tier2"
+      ],
       "drops": false,
       "monster_effects": [
         {
@@ -100,6 +112,9 @@
       "defense": 1000,
       "description": "Fusion: Ash Sparrow\n+ Spark Beetle",
       "art": "images/ashfeather-hawk.png",
+      "tags": [
+        "tier2"
+      ],
       "drops": false
     },
     {
@@ -117,6 +132,9 @@
       "defense": 900,
       "description": "Fusion: Pebble Raptor\n+ Spark Beetle",
       "art": "images/magma-raptor.png",
+      "tags": [
+        "tier2"
+      ],
       "drops": false
     },
     {
@@ -134,6 +152,9 @@
       "defense": 1500,
       "description": "Fusion: Ashfeather\nHawk + Magma Raptor",
       "art": "images/blazing-wyvern.png",
+      "tags": [
+        "tier3"
+      ],
       "drops": false
     },
     {
@@ -151,6 +172,9 @@
       "defense": 2300,
       "description": "Fusion: Magma\nRaptor + Ember\nKindler",
       "art": "images/obsidian-colossus.png",
+      "tags": [
+        "tier3"
+      ],
       "drops": false
     },
     {
@@ -168,6 +192,9 @@
       "defense": 1900,
       "description": "{f8 0A 05}<Destroyed>{f8 0A 00} Deals 600\ndamage to the opponent.\nFusion: Blazing\nWyvern + Obsidian\nColossus",
       "art": "images/caldera-drake.png",
+      "tags": [
+        "tier4"
+      ],
       "drops": false,
       "monster_effects": [
         {
@@ -192,6 +219,9 @@
       "defense": 2300,
       "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+300 ATK and DEF.\n{f8 0A 05}<Destroyed>{f8 0A 00} Deals\n800 damage.\nFusion: Caldera Drake\n+ Crimson Sunbird",
       "art": "images/solar-phoenix-dragon.png",
+      "tags": [
+        "tier5"
+      ],
       "drops": false,
       "monster_effects": [
         {
