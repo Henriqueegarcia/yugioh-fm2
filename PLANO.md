@@ -21,7 +21,7 @@ Legenda: `[ ]` a fazer · `[~]` em andamento · `[x]` feito
 
 ## Fase 0 — Fundação
 
-- [x] Fork `Henriqueufu/yugioh-fm2` criado
+- [x] Fork `Henriqueegarcia/yugioh-fm2` criado
 - [x] Imagem do disco USA validada (SHA-256 confere) e jogo rodando com `play.bat`
 - [x] `CLAUDE.md` e `PLANO.md` no repositório
 - [x] Migrar a execução para o **Claude Code no Windows** (pasta `C:\Users\henri\yugioh-fm2`)
@@ -95,6 +95,6 @@ Referências: `notes/modding.md` (Code mods, API 4: substituir/envolver funçõe
 
 - 2026-10-22 — Cartas novas vêm antes dos NPCs (fases 1 e 2 trocadas), para os duelistas novos já usarem as cartas.
 - 2026-10-22 — Base do projeto: fork do port decompilado da Unchiga (não usar REA / engenharia reversa do zero).
-- 2026-10-22 — Repositório na conta `Henriqueufu`; conta `cadulugaresi` fica para a faculdade (colaboradora do repo).
+- 2026-10-22 — Repositório na conta `Henriqueegarcia` (fork do port da Unchiga); remote `origin` = fork, `upstream` = Unchiga.
 - 2026-10-22 — Execução do desenvolvimento pelo Claude Code no Windows; planejamento no projeto "Criação de jogo" do claude.ai.
 - 2026-10-22 — Tudo como mod em `mods/fm2-*`; branch `fm2`; nunca versionar arquivos do jogo.
