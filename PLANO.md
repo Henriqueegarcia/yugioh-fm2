@@ -41,12 +41,12 @@ Legenda: `[ ]` a fazer · `[~]` em andamento · `[x]` feito
 
 ---
 
-## Fase 1 — Cartas e fusões novas (objetivo 2)
+## Fase 1 — Cartas e fusões novas (objetivo 1)
 
 Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-catalog.csv`, `mods/yamyi-mods`.
 
-- [ ] Pesquisar mods da comunidade como referência de balanceamento
-- [ ] Escrever as **regras de balanceamento** (seção abaixo) e validar com o usuário
+- [x] Pesquisar mods da comunidade como referência de balanceamento (`docs/fm2-pesquisa-balanceamento.md`)
+- [~] Escrever as **regras de balanceamento** (seção abaixo) e validar com o usuário (rascunho pronto, falta validar)
 - [ ] Primeiro lote: ~10 cartas + algumas fusões em `mods/fm2-cards/`, com arte provisória
 - [ ] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2
 - [ ] Testar em duelo, ajustar números, depois expandir em lotes
@@ -54,12 +54,29 @@ Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-cat
 
 ### Regras de balanceamento (rascunho — validar)
 
-- Cada carta nova pertence a um **tier** ligado a um ponto da campanha; ATK/DEF dentro da faixa do tier.
-- Fusão nova não pode gerar carta acima do tier dos materiais + 1.
-- Nenhuma carta nova com ATK maior que as cartas de fim de jogo equivalentes.
-- Drops de cartas fortes com peso baixo; nada de "carta quebrada" logo no começo.
+Base dos números: `docs/fm2-pesquisa-balanceamento.md`.
 
-## Fase 2 — NPCs intermediários (objetivo 4)
+**Tiers** (por ATK; ligados ao ATK médio dos decks dos duelistas):
+
+| Tier | ATK máx. | Ponto da campanha | Cartas originais na faixa |
+|---|---|---|---|
+| T1 | 1000 | início (decks de 200–450) | 260 |
+| T2 | 1500 | começo-meio a meio (decks de 500–1450) | 180 |
+| T3 | 2000 | meio a fim (decks de 1100–1900) | 122 |
+| T4 | 2500 | fim de jogo | 38 |
+| T5 | 3000 | chefes / fusões raras | 21 |
+
+1. Cada carta nova tem um tier; ATK dentro da faixa dele e **nunca acima do máximo do tier**.
+2. ATK/DEF seguem o **nível** da carta: entre o 1º e o 3º quartil das originais daquele nível (ex.: nível 4 → ~900–1600 de ATK). Acima disso só com custo (ex.: DEF baixa, tipo raro, efeito ruim).
+3. Efeito de monstro: **no máximo 1** nas cartas de T1–T2 e 2 nas demais; valores pequenos (`boost` ≤ 300 em T1–T2, ≤ 500 depois; `damage`/`heal` ≤ 500 em T1–T2, ≤ 1000 depois). Nada de `destroy` em massa antes do T4.
+4. Fusão nova não gera carta acima do tier dos materiais + 1. Receita nova para resultado que já tem centenas de receitas quase não muda o jogo; prefira resultados raros.
+5. Nenhuma carta nova com ATK maior que as originais de fim de jogo equivalentes (máx. 3000, exceto chefes decididos caso a caso).
+6. Drops: carta do tier atual com peso 8–40 em 2048 (0,4%–2%); carta do tier seguinte com peso ≤ 10; T4 e T5 só em duelistas do fim. Nenhuma carta T3+ em drops de duelista do começo.
+7. Magia/armadilha nova precisa de `ai_effect` para a IA usá-la; o dano/cura segue os valores da regra 3.
+8. Todo lote novo é testado em duelo (como jogador e como oponente) antes do próximo.
+
+
+## Fase 2 — NPCs intermediários (objetivo 2)
 
 Referências: `notes/more-duelists.md`, `notes/tower-mode.md`, `notes/card-drops.md`.
 
@@ -78,7 +95,7 @@ Referências: `notes/card-packs.md`.
 - [ ] Mod `mods/fm2-shop/` com os packs
 - [ ] (Extra, código) Compra de carta específica, venda e troca com regras próprias
 
-## Fase 4 — Mundo 2D estilo Stardew (objetivo 1)
+## Fase 4 — Mundo 2D estilo Stardew (objetivo 4)
 
 Referências: `notes/modding.md` (Code mods, API 4: substituir/envolver funções do jogo).
 
