@@ -118,6 +118,7 @@ def main():
         assert c["attack"] <= TIER_ATK[c["tier"]], c["id"]
         entry = {k: c[k] for k in ("id", "copy", "name", "type", "attribute", "level", "stars",
                                     "attack", "defense", "description")}
+        entry["art"] = f"images/{c['id']}.png"
         entry["drops"] = False
         if "monster_effects" in c:
             entry["monster_effects"] = c["monster_effects"]
@@ -139,7 +140,7 @@ def main():
         "author": "FM 2",
         "description": "FM 2 cards, batch 1: the Ember line. Ten new fire cards built to be fused "
                        "(Ash Sparrow + Spark Beetle -> Ashfeather Hawk -> ... -> Solar Phoenix Dragon). "
-                       "Artwork is the base card's until the final art is made.",
+                       "Placeholder artwork (gradient + tier dots) until the final art is made.",
         "enabled": True,
         "min_api": 16,
         "game": "slus_01411",

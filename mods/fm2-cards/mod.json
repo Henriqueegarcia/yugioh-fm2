@@ -3,7 +3,7 @@
   "name": "FM 2 Cards",
   "version": "0.1",
   "author": "FM 2",
-  "description": "FM 2 cards, batch 1: the Ember line. Ten new fire cards built to be fused (Ash Sparrow + Spark Beetle -> Ashfeather Hawk -> ... -> Solar Phoenix Dragon). Artwork is the base card's until the final art is made.",
+  "description": "FM 2 cards, batch 1: the Ember line. Ten new fire cards built to be fused (Ash Sparrow + Spark Beetle -> Ashfeather Hawk -> ... -> Solar Phoenix Dragon). Placeholder artwork (gradient + tier dots) until the final art is made.",
   "enabled": true,
   "min_api": 16,
   "game": "slus_01411",
@@ -22,6 +22,7 @@
       "attack": 700,
       "defense": 500,
       "description": "A small raptor that\nnests in warm ash\nand cracked stone.",
+      "art": "images/pebble-raptor.png",
       "drops": false
     },
     {
@@ -38,6 +39,7 @@
       "attack": 600,
       "defense": 500,
       "description": "Its wings leave a\ntrail of sparks. It\nis the seed of the\nEmber line.",
+      "art": "images/spark-beetle.png",
       "drops": false
     },
     {
@@ -54,6 +56,7 @@
       "attack": 700,
       "defense": 400,
       "description": "Born from the embers\nof a dead volcano.",
+      "art": "images/ash-sparrow.png",
       "drops": false
     },
     {
@@ -70,6 +73,7 @@
       "attack": 900,
       "defense": 900,
       "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+200 ATK.\nFusion: Ash Sparrow\n+ Pebble Raptor",
+      "art": "images/ember-kindler.png",
       "drops": false,
       "monster_effects": [
         {
@@ -95,6 +99,7 @@
       "attack": 1400,
       "defense": 1000,
       "description": "Fusion: Ash Sparrow\n+ Spark Beetle",
+      "art": "images/ashfeather-hawk.png",
       "drops": false
     },
     {
@@ -111,6 +116,7 @@
       "attack": 1500,
       "defense": 900,
       "description": "Fusion: Pebble Raptor\n+ Spark Beetle",
+      "art": "images/magma-raptor.png",
       "drops": false
     },
     {
@@ -127,6 +133,7 @@
       "attack": 1900,
       "defense": 1500,
       "description": "Fusion: Ashfeather\nHawk + Magma Raptor",
+      "art": "images/blazing-wyvern.png",
       "drops": false
     },
     {
@@ -143,6 +150,7 @@
       "attack": 1800,
       "defense": 2300,
       "description": "Fusion: Magma\nRaptor + Ember\nKindler",
+      "art": "images/obsidian-colossus.png",
       "drops": false
     },
     {
@@ -159,6 +167,7 @@
       "attack": 2400,
       "defense": 1900,
       "description": "{f8 0A 05}<Destroyed>{f8 0A 00} Deals 600\ndamage to the opponent.\nFusion: Blazing\nWyvern + Obsidian\nColossus",
+      "art": "images/caldera-drake.png",
       "drops": false,
       "monster_effects": [
         {
@@ -182,6 +191,7 @@
       "attack": 2900,
       "defense": 2300,
       "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+300 ATK and DEF.\n{f8 0A 05}<Destroyed>{f8 0A 00} Deals\n800 damage.\nFusion: Caldera Drake\n+ Crimson Sunbird",
+      "art": "images/solar-phoenix-dragon.png",
       "drops": false,
       "monster_effects": [
         {
