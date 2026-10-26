@@ -49,9 +49,9 @@ Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-cat
 - [~] Escrever as **regras de balanceamento** (seção abaixo) e validar com o usuário (rascunho pronto, falta validar)
 - [x] Primeiro lote: linha Ember, 10 cartas + 7 fusões em `mods/fm2-cards/`, arte provisória (`docs/fm2-lote1-ember.md`), testado no jogo
 - [x] Verificador de balanceamento (`tools/fm2/check_balance.py`), com o limite de cartas do baralho
-- [~] Expandir (plano aprovado): **4 blocos-base** de ~10 cartas, de T1 até ~2300 ATK: feitos Ember, Tide e Grove (`docs/fm2-lote2-3-tide-grove.md`, falta testar em jogo); falta 1 bloco (sugestão: Crypt, mortos-vivos, ou Gear, máquinas)
-- [ ] **2 cartas T5** mais fortes, criadas só misturando cartas dos blocos (receita com cartas de blocos diferentes)
-- [ ] **~4 cartas híbridas** que misturam cartas novas com cartas originais
+- [x] Expandir (plano aprovado): **4 blocos-base** (Ember, Tide, Grove, Crypt), de T1 até ~2300 ATK; testados em jogo os três primeiros, Crypt aguarda teste. **Decisão (26/10): cartas novas não têm efeitos de monstro.** Lista de receitas em `docs/fm2-fusoes.md`
+- [x] **2 cartas T5** (Mangrove Leviathan = Tidal Leviathan + World Tree Guardian; Infernal Lich Drake = Wraith King + Caldera Drake), aguardam teste
+- [x] **4 cartas híbridas** (Cinder Knight, Reefstone Sentinel, Thornwolf Alpha, Bone Dragon Overlord), aguardam teste
 - [ ] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2
 - [ ] Testar em duelo, ajustar números, depois expandir em lotes
 - [ ] Arte final das cartas (PNG 102x96, ou 408x384 para HD)

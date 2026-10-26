@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gera mods/fm2-cards/mod.json (cartas do FM 2: blocos Ember, Tide e Grove; dados em block_*.py).
+"""Gera mods/fm2-cards/mod.json (cartas do FM 2: blocos Ember, Tide, Grove, Crypt, hibridas e T5; dados em block_*.py).
 
 Uma carta nova copia uma carta original ("base") e herda as receitas de fusao
 dela. Para manter o balanceamento do PLANO.md (resultado <= tier do material +1),
@@ -25,9 +25,12 @@ def ident(card_id):
 import block_ember
 import block_tide
 import block_grove
+import block_crypt
+import block_hybrid
+import block_mix
 
 # a ordem importa: os ids de execucao (723+) seguem a ordem das cartas
-BLOCKS = [block_ember, block_tide, block_grove]
+BLOCKS = [block_ember, block_tide, block_grove, block_crypt, block_hybrid, block_mix]
 CARDS = [c for blk in BLOCKS for c in blk.CARDS]
 RECIPES = [r for blk in BLOCKS for r in blk.RECIPES]
 
@@ -90,7 +93,7 @@ def main():
         "name": "FM 2 Cards",
         "version": "0.1",
         "author": "FM 2",
-        "description": "FM 2 cards: the Ember, Tide and Grove lines, new cards built to be fused "
+        "description": "FM 2 cards: the Ember, Tide, Grove and Crypt lines, hybrids and T5 mixes; new cards built to be fused "
                        "from weak cards into strong ones. "
                        "Placeholder artwork (gradient + tier dots) until the final art is made.",
         "enabled": True,

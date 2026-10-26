@@ -23,8 +23,7 @@ CARDS = [
     # ---- T2 ----
     dict(id="tide-priestess", colors=((150, 160, 255), (40, 40, 140)), tier=2, copy=525, name="Tide Priestess",
          type="Spellcaster", attribute="Water", level=3, stars=["Moon", "Neptune"], attack=800, defense=1000,
-         description="{f8 0A 05}<Draw>{f8 0A 00} Restores 300 LP at\nthe start of your turn.\nFusion: Foam Sprite\n+ Reef Crab",
-         monster_effects=[{"when": "draw", "do": "heal", "amount": 300}]),
+         description="Fusion: Foam Sprite\n+ Reef Crab"),
     dict(id="coral-guardian", colors=((255, 120, 150), (120, 20, 70)), tier=2, copy=71, name="Coral Guardian",
          type="Aqua", attribute="Water", level=4, stars=["Neptune", "Saturn"], attack=1200, defense=1500,
          description="Fusion: Reef Crab\n+ Brine Eel"),
@@ -41,12 +40,10 @@ CARDS = [
     # ---- T4 ----
     dict(id="tidal-leviathan", colors=((20, 110, 190), (0, 10, 60)), tier=4, copy=718, name="Tidal Leviathan",
          type="Fish", attribute="Water", level=7, stars=["Neptune", "Moon"], attack=2300, defense=2000,
-         description="{f8 0A 05}<Battle>{f8 0A 00} The monster it\nfights loses 300 ATK.\nFusion: Deepwater\nSerpent + Abyssal\nNautilus",
-         monster_effects=[{"when": "combat", "do": "boost", "target": "battle", "attack": -300}]),
+         description="Fusion: Deepwater\nSerpent + Abyssal\nNautilus"),
     dict(id="maelstrom-serpent", colors=((120, 230, 230), (10, 60, 110)), tier=4, copy=223, name="Maelstrom Serpent",
          type="Sea Serpent", attribute="Water", level=7, stars=["Neptune", "Pluto"], attack=2200, defense=1700,
-         description="{f8 0A 05}<Victory>{f8 0A 00} Restores 500 LP\nwhen it destroys a\nmonster.\nFusion: Abyssal\nNautilus + Giant Red\nSeasnake",
-         monster_effects=[{"when": "destroy_opponent", "do": "heal", "amount": 500}]),
+         description="Fusion: Abyssal\nNautilus + Giant Red\nSeasnake"),
 ]
 
 RECIPES = [

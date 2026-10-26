@@ -44,6 +44,40 @@ Sem receita (só drop/baralho): Foam Sprite, Reef Crab, Brine Eel
 
 Sem receita (só drop/baralho): Leaf Grub, Thorn Sprout, Mossback Beetle
 
+## Bloco Crypt
+
+| Receita | Resultado | ATK/DEF | Tier | Cartas cruas |
+|---|---|---|---|---|
+| Bone Pup + Grave Wisp | **Crypt Keeper** | 1200/1500 | T2 | 2: 1x Bone Pup, 1x Grave Wisp |
+| Bone Pup + Rattle Squire | **Hollow Knight** | 1500/900 | T2 | 2: 1x Bone Pup, 1x Rattle Squire |
+| Grave Wisp + Rattle Squire | **Wailing Banshee** | 1100/1200 | T2 | 2: 1x Grave Wisp, 1x Rattle Squire |
+| Hollow Knight + Grave Wisp | **Revenant Lord** | 1900/1500 | T3 | 3: 1x Bone Pup, 1x Rattle Squire, 1x Grave Wisp |
+| Crypt Keeper + Bone Pup | **Sepulchre Golem** | 1700/2200 | T3 | 3: 2x Bone Pup, 1x Grave Wisp |
+| Revenant Lord + Sepulchre Golem | **Wraith King** | 2300/1900 | T4 | 6: 3x Bone Pup, 1x Rattle Squire, 2x Grave Wisp |
+| Sepulchre Golem + Zombie Warrior (original) | **Grim Harvester** | 2200/2000 | T4 | 4: 2x Bone Pup, 1x Grave Wisp, 1x Zombie Warrior (original) |
+
+Sem receita (só drop/baralho): Bone Pup, Grave Wisp, Rattle Squire
+
+## Bloco Hibridas
+
+| Receita | Resultado | ATK/DEF | Tier | Cartas cruas |
+|---|---|---|---|---|
+| Ashfeather Hawk + Celtic Guardian (original) | **Cinder Knight** | 1900/1600 | T3 | 3: 1x Ash Sparrow, 1x Spark Beetle, 1x Celtic Guardian (original) |
+| Coral Guardian + Giant Soldier of Stone (original) | **Reefstone Sentinel** | 1600/2300 | T3 | 3: 1x Reef Crab, 1x Brine Eel, 1x Giant Soldier of Stone (original) |
+| Grove Warden + Silver Fang (original) | **Thornwolf Alpha** | 1900/1500 | T3 | 3: 1x Thorn Sprout, 1x Leaf Grub, 1x Silver Fang (original) |
+| Crypt Keeper + Curse of Dragon (original) | **Bone Dragon Overlord** | 2300/1700 | T4 | 3: 1x Bone Pup, 1x Grave Wisp, 1x Curse of Dragon (original) |
+
+Sem receita (só drop/baralho): 
+
+## Bloco Mistura T5
+
+| Receita | Resultado | ATK/DEF | Tier | Cartas cruas |
+|---|---|---|---|---|
+| Tidal Leviathan + World Tree Guardian | **Mangrove Leviathan** | 2800/2600 | T5 | 11: 3x Brine Eel, 1x Foam Sprite, 1x Reef Crab, 1x Armored Starfish (original), 3x Thorn Sprout, 1x Leaf Grub, 1x Mossback Beetle |
+| Wraith King + Caldera Drake | **Infernal Lich Drake** | 2900/2400 | T5 | 14: 3x Bone Pup, 1x Rattle Squire, 2x Grave Wisp, 2x Ash Sparrow, 3x Spark Beetle, 3x Pebble Raptor |
+
+Sem receita (só drop/baralho): 
+
 ## Observação
 
 Duas fusões não se juntam no campo: se uma receita usa um resultado intermediário, esse intermediário precisa estar na mão como carta real (e portanto cair de algum duelista).

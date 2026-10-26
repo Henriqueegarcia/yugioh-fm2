@@ -149,6 +149,8 @@ def main():
                 rep.warn(f"{i}: ATK {atk} fora da faixa tipica do nivel {level} ({q1}-{q3})")
         # efeitos
         effects = c.get("monster_effects", [])
+        if effects:
+            rep.err(f"{i}: cartas novas do FM 2 nao tem efeitos de monstro")
         if len(effects) > (1 if tier <= 2 else 2):
             rep.err(f"{i}: {len(effects)} efeitos demais para o tier {tier}")
         for e in effects:

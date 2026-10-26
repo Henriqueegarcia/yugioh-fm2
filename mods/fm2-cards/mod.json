@@ -3,7 +3,7 @@
   "name": "FM 2 Cards",
   "version": "0.1",
   "author": "FM 2",
-  "description": "FM 2 cards: the Ember, Tide and Grove lines, new cards built to be fused from weak cards into strong ones. Placeholder artwork (gradient + tier dots) until the final art is made.",
+  "description": "FM 2 cards: the Ember, Tide, Grove and Crypt lines, hybrids and T5 mixes; new cards built to be fused from weak cards into strong ones. Placeholder artwork (gradient + tier dots) until the final art is made.",
   "enabled": true,
   "min_api": 16,
   "game": "slus_01411",
@@ -81,21 +81,12 @@
       ],
       "attack": 900,
       "defense": 900,
-      "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+200 ATK.\nFusion: Ash Sparrow\n+ Pebble Raptor",
+      "description": "Fusion: Ash Sparrow\n+ Pebble Raptor",
       "art": "images/ember-kindler.png",
       "tags": [
         "tier2"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "face_up",
-          "do": "boost",
-          "target": "others",
-          "attribute": "Fire",
-          "attack": 200
-        }
-      ]
+      "drops": false
     },
     {
       "id": "ashfeather-hawk",
@@ -190,19 +181,12 @@
       ],
       "attack": 2400,
       "defense": 1900,
-      "description": "{f8 0A 05}<Destroyed>{f8 0A 00} Deals 600\ndamage to the opponent.\nFusion: Blazing\nWyvern + Obsidian\nColossus",
+      "description": "Fusion: Blazing\nWyvern + Obsidian\nColossus",
       "art": "images/caldera-drake.png",
       "tags": [
         "tier4"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "destroyed",
-          "do": "damage",
-          "amount": 600
-        }
-      ]
+      "drops": false
     },
     {
       "id": "solar-phoenix-dragon",
@@ -217,27 +201,12 @@
       ],
       "attack": 2900,
       "defense": 2300,
-      "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nFIRE monsters get\n+300 ATK and DEF.\n{f8 0A 05}<Destroyed>{f8 0A 00} Deals\n800 damage.\nFusion: Caldera Drake\n+ Crimson Sunbird",
+      "description": "Fusion: Caldera Drake\n+ Crimson Sunbird",
       "art": "images/solar-phoenix-dragon.png",
       "tags": [
         "tier5"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "face_up",
-          "do": "boost",
-          "target": "others",
-          "attribute": "Fire",
-          "attack": 300,
-          "defense": 300
-        },
-        {
-          "when": "destroyed",
-          "do": "damage",
-          "amount": 800
-        }
-      ]
+      "drops": false
     },
     {
       "id": "foam-sprite",
@@ -312,19 +281,12 @@
       ],
       "attack": 800,
       "defense": 1000,
-      "description": "{f8 0A 05}<Draw>{f8 0A 00} Restores 300 LP at\nthe start of your turn.\nFusion: Foam Sprite\n+ Reef Crab",
+      "description": "Fusion: Foam Sprite\n+ Reef Crab",
       "art": "images/tide-priestess.png",
       "tags": [
         "tier2"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "draw",
-          "do": "heal",
-          "amount": 300
-        }
-      ]
+      "drops": false
     },
     {
       "id": "coral-guardian",
@@ -419,20 +381,12 @@
       ],
       "attack": 2300,
       "defense": 2000,
-      "description": "{f8 0A 05}<Battle>{f8 0A 00} The monster it\nfights loses 300 ATK.\nFusion: Deepwater\nSerpent + Abyssal\nNautilus",
+      "description": "Fusion: Deepwater\nSerpent + Abyssal\nNautilus",
       "art": "images/tidal-leviathan.png",
       "tags": [
         "tier4"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "combat",
-          "do": "boost",
-          "target": "battle",
-          "attack": -300
-        }
-      ]
+      "drops": false
     },
     {
       "id": "maelstrom-serpent",
@@ -447,19 +401,12 @@
       ],
       "attack": 2200,
       "defense": 1700,
-      "description": "{f8 0A 05}<Victory>{f8 0A 00} Restores 500 LP\nwhen it destroys a\nmonster.\nFusion: Abyssal\nNautilus + Giant Red\nSeasnake",
+      "description": "Fusion: Abyssal\nNautilus + Giant Red\nSeasnake",
       "art": "images/maelstrom-serpent.png",
       "tags": [
         "tier4"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "destroy_opponent",
-          "do": "heal",
-          "amount": 500
-        }
-      ]
+      "drops": false
     },
     {
       "id": "leaf-grub",
@@ -574,20 +521,12 @@
       ],
       "attack": 900,
       "defense": 800,
-      "description": "{f8 0A 05}<Battle>{f8 0A 00} Gets +300 ATK\nwhile it fights.\nFusion: Thorn Sprout\n+ Mossback Beetle",
+      "description": "Fusion: Thorn Sprout\n+ Mossback Beetle",
       "art": "images/spore-shaman.png",
       "tags": [
         "tier2"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "combat",
-          "do": "boost",
-          "target": "self",
-          "attack": 300
-        }
-      ]
+      "drops": false
     },
     {
       "id": "hornet-duke",
@@ -642,20 +581,12 @@
       ],
       "attack": 2300,
       "defense": 2000,
-      "description": "{f8 0A 05}<Battle>{f8 0A 00} Gets +300 ATK\nwhile it fights.\nFusion: Hornet Duke\n+ Leaf Grub",
+      "description": "Fusion: Hornet Duke\n+ Leaf Grub",
       "art": "images/emperor-scarab.png",
       "tags": [
         "tier4"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "combat",
-          "do": "boost",
-          "target": "self",
-          "attack": 300
-        }
-      ]
+      "drops": false
     },
     {
       "id": "world-tree-guardian",
@@ -670,22 +601,332 @@
       ],
       "attack": 2200,
       "defense": 2300,
-      "description": "{f8 0A 05}<Aura>{f8 0A 00} Your other\nPLANT monsters get\n+200 ATK and DEF.\nFusion: Ancient\nTreant + Thorn Sprout",
+      "description": "Fusion: Ancient\nTreant + Thorn Sprout",
       "art": "images/world-tree-guardian.png",
       "tags": [
         "tier4"
       ],
-      "drops": false,
-      "monster_effects": [
-        {
-          "when": "face_up",
-          "do": "boost",
-          "target": "others",
-          "type": "Plant",
-          "attack": 200,
-          "defense": 200
-        }
-      ]
+      "drops": false
+    },
+    {
+      "id": "bone-pup",
+      "copy": 548,
+      "name": "Bone Pup",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 2,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "attack": 500,
+      "defense": 400,
+      "description": "A puppy that never\nleft its master's\ngrave.",
+      "art": "images/bone-pup.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "grave-wisp",
+      "copy": 203,
+      "name": "Grave Wisp",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 2,
+      "stars": [
+        "Pluto",
+        "Mercury"
+      ],
+      "attack": 600,
+      "defense": 800,
+      "description": "A pale flame that\nflickers over old\ntombs.",
+      "art": "images/grave-wisp.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "rattle-squire",
+      "copy": 154,
+      "name": "Rattle Squire",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 3,
+      "stars": [
+        "Pluto",
+        "Mars"
+      ],
+      "attack": 800,
+      "defense": 500,
+      "description": "A skeleton still\ncarrying a rusty\nshield.",
+      "art": "images/rattle-squire.png",
+      "tags": [
+        "tier1"
+      ],
+      "drops": false
+    },
+    {
+      "id": "crypt-keeper",
+      "copy": 351,
+      "name": "Crypt Keeper",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Saturn"
+      ],
+      "attack": 1200,
+      "defense": 1500,
+      "description": "Fusion: Bone Pup\n+ Grave Wisp",
+      "art": "images/crypt-keeper.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "hollow-knight",
+      "copy": 241,
+      "name": "Hollow Knight",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Mars"
+      ],
+      "attack": 1500,
+      "defense": 900,
+      "description": "Fusion: Bone Pup\n+ Rattle Squire",
+      "art": "images/hollow-knight.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "wailing-banshee",
+      "copy": 470,
+      "name": "Wailing Banshee",
+      "type": "Spellcaster",
+      "attribute": "Dark",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "attack": 1100,
+      "defense": 1200,
+      "description": "Fusion: Grave Wisp\n+ Rattle Squire",
+      "art": "images/wailing-banshee.png",
+      "tags": [
+        "tier2"
+      ],
+      "drops": false
+    },
+    {
+      "id": "revenant-lord",
+      "copy": 545,
+      "name": "Revenant Lord",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 6,
+      "stars": [
+        "Pluto",
+        "Jupiter"
+      ],
+      "attack": 1900,
+      "defense": 1500,
+      "description": "Fusion: Hollow\nKnight + Grave Wisp",
+      "art": "images/revenant-lord.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "sepulchre-golem",
+      "copy": 99,
+      "name": "Sepulchre Golem",
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Saturn",
+        "Pluto"
+      ],
+      "attack": 1700,
+      "defense": 2200,
+      "description": "Fusion: Crypt\nKeeper + Bone Pup",
+      "art": "images/sepulchre-golem.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "wraith-king",
+      "copy": 564,
+      "name": "Wraith King",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 7,
+      "stars": [
+        "Pluto",
+        "Uranus"
+      ],
+      "attack": 2300,
+      "defense": 1900,
+      "description": "Fusion: Revenant\nLord + Sepulchre\nGolem",
+      "art": "images/wraith-king.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false
+    },
+    {
+      "id": "grim-harvester",
+      "copy": 719,
+      "name": "Grim Harvester",
+      "type": "Zombie",
+      "attribute": "Dark",
+      "level": 7,
+      "stars": [
+        "Pluto",
+        "Saturn"
+      ],
+      "attack": 2200,
+      "defense": 2000,
+      "description": "Fusion: Sepulchre\nGolem + Zombie\nWarrior",
+      "art": "images/grim-harvester.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false
+    },
+    {
+      "id": "cinder-knight",
+      "copy": 15,
+      "name": "Cinder Knight",
+      "type": "Warrior",
+      "attribute": "Fire",
+      "level": 5,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "attack": 1900,
+      "defense": 1600,
+      "description": "Fusion: Ashfeather\nHawk + Celtic\nGuardian",
+      "art": "images/cinder-knight.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "reefstone-sentinel",
+      "copy": 74,
+      "name": "Reefstone Sentinel",
+      "type": "Rock",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Saturn"
+      ],
+      "attack": 1600,
+      "defense": 2300,
+      "description": "Fusion: Coral\nGuardian + Giant\nSoldier of Stone",
+      "art": "images/reefstone-sentinel.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "thornwolf-alpha",
+      "copy": 65,
+      "name": "Thornwolf Alpha",
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 5,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "attack": 1900,
+      "defense": 1500,
+      "description": "Fusion: Grove\nWarden + Silver Fang",
+      "art": "images/thornwolf-alpha.png",
+      "tags": [
+        "tier3"
+      ],
+      "drops": false
+    },
+    {
+      "id": "bone-dragon-overlord",
+      "copy": 97,
+      "name": "Bone Dragon Overlord",
+      "type": "Dragon",
+      "attribute": "Dark",
+      "level": 7,
+      "stars": [
+        "Pluto",
+        "Jupiter"
+      ],
+      "attack": 2300,
+      "defense": 1700,
+      "description": "Fusion: Crypt\nKeeper + Curse of\nDragon",
+      "art": "images/bone-dragon-overlord.png",
+      "tags": [
+        "tier4"
+      ],
+      "drops": false
+    },
+    {
+      "id": "mangrove-leviathan",
+      "copy": 718,
+      "name": "Mangrove Leviathan",
+      "type": "Sea Serpent",
+      "attribute": "Water",
+      "level": 8,
+      "stars": [
+        "Neptune",
+        "Saturn"
+      ],
+      "attack": 2800,
+      "defense": 2600,
+      "description": "Fusion: Tidal\nLeviathan + World\nTree Guardian",
+      "art": "images/mangrove-leviathan.png",
+      "tags": [
+        "tier5"
+      ],
+      "drops": false
+    },
+    {
+      "id": "infernal-lich-drake",
+      "copy": 705,
+      "name": "Infernal Lich Drake",
+      "type": "Dragon",
+      "attribute": "Dark",
+      "level": 8,
+      "stars": [
+        "Pluto",
+        "Mars"
+      ],
+      "attack": 2900,
+      "defense": 2400,
+      "description": "Fusion: Wraith\nKing + Caldera\nDrake",
+      "art": "images/infernal-lich-drake.png",
+      "tags": [
+        "tier5"
+      ],
+      "drops": false
     }
   ],
   "fusions": [
@@ -2819,6 +3060,1182 @@
     },
     {
       "with": [
+        "fm2-cards:bone-pup:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        59
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        73
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        97
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        138
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        424
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        489
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        511
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        545
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        567
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        620
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        637
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        712
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        59
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        73
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        97
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        138
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        424
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        489
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        511
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        545
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        567
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        620
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        637
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        712
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        4
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        7
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        10
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        11
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        12
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        15
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        31
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        43
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        46
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        47
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        59
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        61
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        62
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        63
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        65
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        66
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        70
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        73
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        78
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        81
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        91
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        93
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        94
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        97
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        113
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        117
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        121
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        122
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        125
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        127
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        138
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        168
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        188
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        189
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        200
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        201
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        202
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        234
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        248
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        255
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        272
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        282
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        296
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        298
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        353
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        357
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        369
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        376
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        389
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        403
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        409
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        424
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        434
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        448
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        464
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        465
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        466
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        481
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        483
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        487
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        489
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        491
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        511
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        521
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        522
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        527
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        528
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        545
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        554
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        555
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        561
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        567
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        575
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        577
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        581
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        595
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        597
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        598
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        603
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        604
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        620
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        621
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        629
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        636
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        637
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        642
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:rattle-squire:1",
+        712
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:crypt-keeper:1",
+        59
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:hollow-knight:1",
+        59
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:wailing-banshee:1",
+        59
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        45
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        191
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        211
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        371
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        425
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        458
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        459
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        460
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        461
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        462
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        463
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        537
+      ],
+      "result": null
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        610
+      ],
+      "result": null
+    },
+    {
+      "with": [
         "fm2-cards:ash-sparrow:1",
         "fm2-cards:pebble-raptor:1"
       ],
@@ -2963,6 +4380,97 @@
         "fm2-cards:thorn-sprout:1"
       ],
       "result": "fm2-cards:world-tree-guardian:1"
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        "fm2-cards:grave-wisp:1"
+      ],
+      "result": "fm2-cards:crypt-keeper:1"
+    },
+    {
+      "with": [
+        "fm2-cards:bone-pup:1",
+        "fm2-cards:rattle-squire:1"
+      ],
+      "result": "fm2-cards:hollow-knight:1"
+    },
+    {
+      "with": [
+        "fm2-cards:grave-wisp:1",
+        "fm2-cards:rattle-squire:1"
+      ],
+      "result": "fm2-cards:wailing-banshee:1"
+    },
+    {
+      "with": [
+        "fm2-cards:hollow-knight:1",
+        "fm2-cards:grave-wisp:1"
+      ],
+      "result": "fm2-cards:revenant-lord:1"
+    },
+    {
+      "with": [
+        "fm2-cards:crypt-keeper:1",
+        "fm2-cards:bone-pup:1"
+      ],
+      "result": "fm2-cards:sepulchre-golem:1"
+    },
+    {
+      "with": [
+        "fm2-cards:revenant-lord:1",
+        "fm2-cards:sepulchre-golem:1"
+      ],
+      "result": "fm2-cards:wraith-king:1"
+    },
+    {
+      "with": [
+        "fm2-cards:sepulchre-golem:1",
+        30
+      ],
+      "result": "fm2-cards:grim-harvester:1"
+    },
+    {
+      "with": [
+        "fm2-cards:ashfeather-hawk:1",
+        41
+      ],
+      "result": "fm2-cards:cinder-knight:1"
+    },
+    {
+      "with": [
+        "fm2-cards:coral-guardian:1",
+        74
+      ],
+      "result": "fm2-cards:reefstone-sentinel:1"
+    },
+    {
+      "with": [
+        "fm2-cards:grove-warden:1",
+        65
+      ],
+      "result": "fm2-cards:thornwolf-alpha:1"
+    },
+    {
+      "with": [
+        "fm2-cards:crypt-keeper:1",
+        39
+      ],
+      "result": "fm2-cards:bone-dragon-overlord:1"
+    },
+    {
+      "with": [
+        "fm2-cards:tidal-leviathan:1",
+        "fm2-cards:world-tree-guardian:1"
+      ],
+      "result": "fm2-cards:mangrove-leviathan:1"
+    },
+    {
+      "with": [
+        "fm2-cards:wraith-king:1",
+        "fm2-cards:caldera-drake:1"
+      ],
+      "result": "fm2-cards:infernal-lich-drake:1"
     }
   ]
 }

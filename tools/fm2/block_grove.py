@@ -28,8 +28,7 @@ CARDS = [
          description="Fusion: Thorn Sprout\n+ Leaf Grub"),
     dict(id="spore-shaman", colors=((200, 140, 230), (80, 30, 110)), tier=2, copy=619, name="Spore Shaman",
          type="Spellcaster", attribute="Earth", level=3, stars=["Saturn", "Moon"], attack=900, defense=800,
-         description="{f8 0A 05}<Battle>{f8 0A 00} Gets +300 ATK\nwhile it fights.\nFusion: Thorn Sprout\n+ Mossback Beetle",
-         monster_effects=[{"when": "combat", "do": "boost", "target": "self", "attack": 300}]),
+         description="Fusion: Thorn Sprout\n+ Mossback Beetle"),
     # ---- T3 ----
     dict(id="hornet-duke", colors=((255, 230, 70), (130, 90, 10)), tier=3, copy=614, name="Hornet Duke",
          type="Insect", attribute="Wind", level=5, stars=["Mercury", "Jupiter"], attack=1800, defense=1400,
@@ -40,13 +39,10 @@ CARDS = [
     # ---- T4 ----
     dict(id="emperor-scarab", colors=((90, 220, 170), (10, 80, 70)), tier=4, copy=717, name="Emperor Scarab",
          type="Insect", attribute="Earth", level=7, stars=["Mercury", "Sun"], attack=2300, defense=2000,
-         description="{f8 0A 05}<Battle>{f8 0A 00} Gets +300 ATK\nwhile it fights.\nFusion: Hornet Duke\n+ Leaf Grub",
-         monster_effects=[{"when": "combat", "do": "boost", "target": "self", "attack": 300}]),
+         description="Fusion: Hornet Duke\n+ Leaf Grub"),
     dict(id="world-tree-guardian", colors=((70, 200, 80), (10, 60, 30)), tier=4, copy=638, name="World Tree Guardian",
          type="Plant", attribute="Earth", level=7, stars=["Saturn", "Venus"], attack=2200, defense=2300,
-         description="{f8 0A 05}<Aura>{f8 0A 00} Your other\nPLANT monsters get\n+200 ATK and DEF.\nFusion: Ancient\nTreant + Thorn Sprout",
-         monster_effects=[{"when": "face_up", "do": "boost", "target": "others", "type": "Plant",
-                           "attack": 200, "defense": 200}]),
+         description="Fusion: Ancient\nTreant + Thorn Sprout"),
 ]
 
 RECIPES = [
