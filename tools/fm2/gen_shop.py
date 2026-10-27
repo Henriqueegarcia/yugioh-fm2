@@ -91,6 +91,16 @@ packs.append({
 # `label` is not a pack key; the single pool has no tiers, so drop it
 packs[-1].pop("label")
 
+# Compra por senha na tela de Password: senha 000007NN (NN = ordem da carta no mod, comeca em 723).
+# As T5 ficam sem senha: so existem por fusao.
+PRICE = {1: 30, 2: 120, 3: 400, 4: 1500}
+passwords = {}
+for n, c in enumerate(gen_cards.CARDS):
+    if c["tier"] <= 4:
+        passwords[f"fm2-cards:{c['id']}:1"] = {"password": f"{723 + n:08d}", "starchips": PRICE[c["tier"]]}
+    else:
+        passwords[f"fm2-cards:{c['id']}:1"] = {"password": ""}
+
 mod = {
     "id": "fm2-shop",
     "name": "FM 2 Shop",
@@ -102,11 +112,12 @@ mod = {
     "min_api": 16,
     "game": "slus_01411",
     "limits": {"starchip_prize": STARCHIP_PRIZE},
+    "passwords": passwords,
     "packs": packs,
     "pack_shop": {"password": "both", "when_nothing_left": "refuse"},
 }
 MOD.mkdir(parents=True, exist_ok=True)
 (MOD / "mod.json").write_text(json.dumps(mod, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-print(len(packs), "packs ->", MOD)
+print(len(packs), "packs,", len(passwords), "passwords ->", MOD)
 for p in packs:
     print(f"  {p['name']:14} {p['price']:>4} starchips x{p['count']}")

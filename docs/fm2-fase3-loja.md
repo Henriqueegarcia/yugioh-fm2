@@ -14,6 +14,10 @@ S 10, A 8, B 5, C 3, D 2 (original: 5, 4, 3, 2, 1).
 As T5 (Solar Phoenix Dragon, Mangrove Leviathan, Infernal Lich Drake) **não** estão em nenhum pack: só por fusão.
 `max_copies: 3` impede o pack de dar mais cópias do que o baralho aceita; quando você já tem tudo, o pack mostra ALL OWNED.
 
+## Compra por senha
+
+Cada carta T1-T4 tem senha `000007NN` e preço fixo (T1 30, T2 120, T3 400, T4 1500); lista em `docs/fm2-senhas.md`.
+
 ## Liberações
 
 `USE_GATES = False` (modo de teste): todos os packs abertos desde o início. Com `True`:
@@ -23,4 +27,4 @@ Legend Chest ao vencer Orin e abrir 10 packs. Packs trancados aparecem como ????
 ## O que ainda é palpite
 
 Preços e a média de StarChips por vitória precisam ser calibrados jogando.
-Ainda não feito (extra, exige código): comprar carta específica, vender e trocar.
+Compra de carta específica: feita por senha. Venda e troca com NPC exigiriam um mod de código; decidido não fazer por enquanto.

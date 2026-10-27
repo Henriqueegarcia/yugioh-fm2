@@ -16,6 +16,189 @@
       "D": 2
     }
   },
+  "passwords": {
+    "fm2-cards:pebble-raptor:1": {
+      "password": "00000723",
+      "starchips": 30
+    },
+    "fm2-cards:spark-beetle:1": {
+      "password": "00000724",
+      "starchips": 30
+    },
+    "fm2-cards:ash-sparrow:1": {
+      "password": "00000725",
+      "starchips": 30
+    },
+    "fm2-cards:ember-kindler:1": {
+      "password": "00000726",
+      "starchips": 120
+    },
+    "fm2-cards:ashfeather-hawk:1": {
+      "password": "00000727",
+      "starchips": 120
+    },
+    "fm2-cards:magma-raptor:1": {
+      "password": "00000728",
+      "starchips": 120
+    },
+    "fm2-cards:blazing-wyvern:1": {
+      "password": "00000729",
+      "starchips": 400
+    },
+    "fm2-cards:obsidian-colossus:1": {
+      "password": "00000730",
+      "starchips": 400
+    },
+    "fm2-cards:caldera-drake:1": {
+      "password": "00000731",
+      "starchips": 1500
+    },
+    "fm2-cards:solar-phoenix-dragon:1": {
+      "password": ""
+    },
+    "fm2-cards:foam-sprite:1": {
+      "password": "00000733",
+      "starchips": 30
+    },
+    "fm2-cards:reef-crab:1": {
+      "password": "00000734",
+      "starchips": 30
+    },
+    "fm2-cards:brine-eel:1": {
+      "password": "00000735",
+      "starchips": 30
+    },
+    "fm2-cards:tide-priestess:1": {
+      "password": "00000736",
+      "starchips": 120
+    },
+    "fm2-cards:coral-guardian:1": {
+      "password": "00000737",
+      "starchips": 120
+    },
+    "fm2-cards:razor-barracuda:1": {
+      "password": "00000738",
+      "starchips": 120
+    },
+    "fm2-cards:deepwater-serpent:1": {
+      "password": "00000739",
+      "starchips": 400
+    },
+    "fm2-cards:abyssal-nautilus:1": {
+      "password": "00000740",
+      "starchips": 400
+    },
+    "fm2-cards:tidal-leviathan:1": {
+      "password": "00000741",
+      "starchips": 1500
+    },
+    "fm2-cards:maelstrom-serpent:1": {
+      "password": "00000742",
+      "starchips": 1500
+    },
+    "fm2-cards:leaf-grub:1": {
+      "password": "00000743",
+      "starchips": 30
+    },
+    "fm2-cards:thorn-sprout:1": {
+      "password": "00000744",
+      "starchips": 30
+    },
+    "fm2-cards:mossback-beetle:1": {
+      "password": "00000745",
+      "starchips": 30
+    },
+    "fm2-cards:bramble-mantis:1": {
+      "password": "00000746",
+      "starchips": 120
+    },
+    "fm2-cards:grove-warden:1": {
+      "password": "00000747",
+      "starchips": 120
+    },
+    "fm2-cards:spore-shaman:1": {
+      "password": "00000748",
+      "starchips": 120
+    },
+    "fm2-cards:hornet-duke:1": {
+      "password": "00000749",
+      "starchips": 400
+    },
+    "fm2-cards:ancient-treant:1": {
+      "password": "00000750",
+      "starchips": 400
+    },
+    "fm2-cards:emperor-scarab:1": {
+      "password": "00000751",
+      "starchips": 1500
+    },
+    "fm2-cards:world-tree-guardian:1": {
+      "password": "00000752",
+      "starchips": 1500
+    },
+    "fm2-cards:bone-pup:1": {
+      "password": "00000753",
+      "starchips": 30
+    },
+    "fm2-cards:grave-wisp:1": {
+      "password": "00000754",
+      "starchips": 30
+    },
+    "fm2-cards:rattle-squire:1": {
+      "password": "00000755",
+      "starchips": 30
+    },
+    "fm2-cards:crypt-keeper:1": {
+      "password": "00000756",
+      "starchips": 120
+    },
+    "fm2-cards:hollow-knight:1": {
+      "password": "00000757",
+      "starchips": 120
+    },
+    "fm2-cards:wailing-banshee:1": {
+      "password": "00000758",
+      "starchips": 120
+    },
+    "fm2-cards:revenant-lord:1": {
+      "password": "00000759",
+      "starchips": 400
+    },
+    "fm2-cards:sepulchre-golem:1": {
+      "password": "00000760",
+      "starchips": 400
+    },
+    "fm2-cards:wraith-king:1": {
+      "password": "00000761",
+      "starchips": 1500
+    },
+    "fm2-cards:grim-harvester:1": {
+      "password": "00000762",
+      "starchips": 1500
+    },
+    "fm2-cards:cinder-knight:1": {
+      "password": "00000763",
+      "starchips": 400
+    },
+    "fm2-cards:reefstone-sentinel:1": {
+      "password": "00000764",
+      "starchips": 400
+    },
+    "fm2-cards:thornwolf-alpha:1": {
+      "password": "00000765",
+      "starchips": 400
+    },
+    "fm2-cards:bone-dragon-overlord:1": {
+      "password": "00000766",
+      "starchips": 1500
+    },
+    "fm2-cards:mangrove-leviathan:1": {
+      "password": ""
+    },
+    "fm2-cards:infernal-lich-drake:1": {
+      "password": ""
+    }
+  },
   "packs": [
     {
       "id": "ember-seeds",

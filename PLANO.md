@@ -98,7 +98,7 @@ Referências: `notes/card-packs.md`.
 - [x] Desenhar a economia (`docs/fm2-fase3-loja.md`; números a calibrar jogando): StarChips ganhos por duelo/rank × preço por raridade
 - [x] Booster packs por fase da campanha (desbloqueados conforme progresso), com pity e limite de cópias
 - [x] Mod `mods/fm2-shop/` com os packs
-- [ ] (Extra, código) Compra de carta específica, venda e troca com regras próprias
+- [x] Compra de carta específica por senha (`docs/fm2-senhas.md`); venda e troca ficam de fora por exigirem código
 
 ## Fase 4 — Mundo 2D estilo Stardew (objetivo 4)
 
