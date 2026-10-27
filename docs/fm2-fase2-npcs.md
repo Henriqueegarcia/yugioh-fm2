@@ -29,4 +29,5 @@ e servem de carta real para as duas T5. As híbridas e as T5 só se fazem por fu
 - Os pontos de liberação (`gate`) são palpite pela tabela de força dos duelistas da pesquisa; ajustar depois de jogar.
 - As cartas de apoio originais são escolhidas por atributo/ATK, sem curadoria.
 - Retratos provisórios feitos com ícones de game-icons.net (ver `CREDITS-arte.md`).
+- `USE_GATES = False` em `gen_duelists.py` libera os 4 desde o início (modo de teste); `True` ativa as liberações da tabela.
 - NPCs no mapa 2D só na Fase 4; por enquanto são oponentes do Duelo Livre.

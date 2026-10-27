@@ -10,6 +10,9 @@ import gen_art
 import icon_map
 from gen_cards import ROOT, load_retail
 
+# True: cada NPC so aparece depois do duelista `gate` da campanha. False: todos liberados desde o inicio (teste).
+USE_GATES = False
+
 MOD = ROOT / "mods" / "fm2-duelists"
 NON_MONSTER = ("Magic", "Trap", "Ritual", "Equip")
 
@@ -102,8 +105,9 @@ def main():
     (MOD / "portraits").mkdir(parents=True, exist_ok=True)
     decks, drops, notes = {}, {}, []
     for n in NPCS:
-        duelist = {"copy": n["base"], "name": n["name"], "slot": n["slot"],
-                   "unlock": {"story": 0x6E0 + n["gate"]}}
+        duelist = {"copy": n["base"], "name": n["name"], "slot": n["slot"]}
+        if USE_GATES:
+            duelist["unlock"] = {"story": 0x6E0 + n["gate"]}
         (MOD / "duelists" / f"{n['id']}.json").write_text(json.dumps(duelist, indent=2) + "\n", encoding="utf-8")
         fill = fillers(cat, n["filler"], 40 - sum(n["deck"].values()))
         deck = {"fixed": True}
