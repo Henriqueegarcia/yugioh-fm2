@@ -101,6 +101,52 @@ for n, c in enumerate(gen_cards.CARDS):
     else:
         passwords[f"fm2-cards:{c['id']}:1"] = {"password": ""}
 
+# ---- Packs das cartas originais (por tipo) ----
+import csv
+
+CATALOG = list(csv.DictReader(open(ROOT / "notes" / "card-catalog.csv", encoding="utf-8")))
+EXODIA = {17, 18, 19, 20, 21}  # as 5 pecas: com 3 copias por carta seria Exodia facil demais
+NON_MONSTER = ("Magic", "Trap", "Equip", "Ritual")
+
+
+def rarity(r):
+    """common/uncommon/rare/ultra: monstros pelo ATK, as demais cartas pelo preco em StarChips."""
+    if r["type"] in NON_MONSTER:
+        cost = int(r["starchip_cost"])
+        return "common" if cost <= 100 else "uncommon" if cost <= 300 else "rare" if cost <= 900 else "ultra"
+    atk = int(r["attack"])
+    return "common" if atk <= 1000 else "uncommon" if atk <= 1500 else "rare" if atk <= 2000 else "ultra"
+
+
+RETAIL_PACKS = [
+    ("dragon-pack", "Dragon Pack", ("Dragon", "Thunder"), "Dragons and thunder\nmonsters."),
+    ("spell-pack", "Spell Pack", ("Spellcaster", "Fairy"), "Spellcasters and\nfairies."),
+    ("warrior-pack", "Warrior Pack", ("Warrior", "Beast-Warrior"), "Warriors and\nbeast-warriors."),
+    ("fiend-pack", "Fiend Pack", ("Fiend", "Zombie"), "Fiends and the\nundead."),
+    ("beast-pack", "Beast Pack", ("Beast", "Winged Beast"), "Beasts and winged\nbeasts."),
+    ("ocean-pack", "Ocean Pack", ("Aqua", "Fish", "Sea Serpent"), "Creatures of the\nwater."),
+    ("nature-pack", "Nature Pack", ("Plant", "Insect", "Dinosaur", "Reptile"), "Plants, insects and\nreptiles."),
+    ("iron-pack", "Iron Pack", ("Machine", "Rock", "Pyro"), "Machines, rocks and\npyros."),
+    ("magic-pack", "Magic & Traps", ("Magic", "Trap", "Equip", "Ritual"), "Spells, traps,\nequips and rituals."),
+]
+for pid, name, kinds, desc in RETAIL_PACKS:
+    tiers = {"common": {}, "uncommon": {}, "rare": {}, "ultra": {}}
+    for r in CATALOG:
+        if r["type"] not in kinds or int(r["id"]) in EXODIA or r["starchip_cost"] == "N/A":
+            continue
+        if r["type"] not in NON_MONSTER and (not r["attack"] or int(r["attack"]) > 3000):
+            continue
+        tiers[rarity(r)][r["id"]] = 1
+    tiers = {k: v for k, v in tiers.items() if v}
+    spec = {"common": {"odds": 700}, "uncommon": {"odds": 230, "label": "UNCOMMON", "color": 1},
+            "rare": {"odds": 60, "label": "RARE!", "color": 2},
+            "ultra": {"odds": 10, "label": "ULTRA RARE!!", "color": 1, "reveal": "flip"}}
+    packs.append({
+        "id": pid, "name": name, "description": desc, "price": 60, "count": 5,
+        "tiers": {k: {**spec[k], "cards": v} for k, v in tiers.items()},
+        "pity": {"rare": 8}, "max_copies": 3,
+    })
+
 mod = {
     "id": "fm2-shop",
     "name": "FM 2 Shop",

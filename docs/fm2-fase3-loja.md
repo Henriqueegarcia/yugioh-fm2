@@ -11,6 +11,12 @@ S 10, A 8, B 5, C 3, D 2 (original: 5, 4, 3, 2, 1).
 | **Hybrid Crate** | 150 | 3 | T3 de todas as linhas e híbridas; 10% Bone Dragon Overlord (T4) | idem |
 | **Legend Chest** | 400 | 2 | T4 de todas as linhas, sem repetir no pack | 5 compras por save |
 
+| **Dragon, Spell, Warrior, Fiend, Beast, Ocean, Nature, Iron Pack** | 60 | 5 | cartas **originais** do tipo (ex.: Dragon Pack = Dragon + Thunder); raridade pelo ATK: 70% ATK ≤1000, 23% ≤1500, 6% ≤2000, 1% acima | máx. 3 cópias |
+| **Magic & Traps** | 60 | 5 | magias, armadilhas, equips e rituais; raridade pelo preço em StarChips | idem |
+
+Nos packs de originais ficam de fora as 5 peças do Exodia e as cartas com mais de 3000 de ATK
+(Meteor B. Dragon, Blue-eyes Ultimate Dragon etc.), que continuam só como drop de chefe. Pity: 1 carta rara ou melhor a cada 8 packs.
+
 As T5 (Solar Phoenix Dragon, Mangrove Leviathan, Infernal Lich Drake) **não** estão em nenhum pack: só por fusão.
 `max_copies: 3` impede o pack de dar mais cópias do que o baralho aceita; quando você já tem tudo, o pack mostra ALL OWNED.
 
