@@ -1,0 +1,8 @@
+{
+  "copy": "Weevil Underwood",
+  "name": "Brenn",
+  "slot": 42,
+  "unlock": {
+    "story": 1777
+  }
+}

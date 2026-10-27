@@ -1,0 +1,8 @@
+{
+  "copy": "Villager 2",
+  "name": "Kael",
+  "slot": 40,
+  "unlock": {
+    "story": 1767
+  }
+}

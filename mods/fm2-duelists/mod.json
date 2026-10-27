@@ -1,0 +1,211 @@
+{
+  "id": "fm2-duelists",
+  "name": "FM 2 Duelists",
+  "version": "0.1",
+  "author": "FM 2",
+  "description": "FM 2's intermediate opponents: four Free Duel characters, one per card line, who give the new cards.",
+  "enabled": true,
+  "min_api": 16,
+  "game": "slus_01411",
+  "decks": {
+    "kael": {
+      "fixed": true,
+      "fm2-cards:ash-sparrow:1": 3,
+      "fm2-cards:pebble-raptor:1": 3,
+      "fm2-cards:spark-beetle:1": 3,
+      "fm2-cards:ember-kindler:1": 3,
+      "fm2-cards:ashfeather-hawk:1": 3,
+      "fm2-cards:magma-raptor:1": 3,
+      "fm2-cards:blazing-wyvern:1": 1,
+      "74": 3,
+      "46": 3,
+      "457": 3,
+      "573": 3,
+      "142": 3,
+      "75": 3,
+      "579": 3
+    },
+    "marin": {
+      "fixed": true,
+      "fm2-cards:foam-sprite:1": 3,
+      "fm2-cards:reef-crab:1": 3,
+      "fm2-cards:brine-eel:1": 3,
+      "fm2-cards:tide-priestess:1": 3,
+      "fm2-cards:coral-guardian:1": 3,
+      "fm2-cards:razor-barracuda:1": 3,
+      "fm2-cards:deepwater-serpent:1": 2,
+      "fm2-cards:abyssal-nautilus:1": 1,
+      "131": 3,
+      "353": 3,
+      "550": 3,
+      "70": 3,
+      "76": 3,
+      "196": 3,
+      "243": 1
+    },
+    "brenn": {
+      "fixed": true,
+      "fm2-cards:leaf-grub:1": 3,
+      "fm2-cards:thorn-sprout:1": 3,
+      "fm2-cards:mossback-beetle:1": 3,
+      "fm2-cards:bramble-mantis:1": 3,
+      "fm2-cards:grove-warden:1": 3,
+      "fm2-cards:spore-shaman:1": 3,
+      "fm2-cards:hornet-duke:1": 2,
+      "fm2-cards:ancient-treant:1": 2,
+      "fm2-cards:emperor-scarab:1": 1,
+      "528": 3,
+      "511": 3,
+      "3": 3,
+      "61": 3,
+      "535": 3,
+      "478": 2
+    },
+    "morrow": {
+      "fixed": true,
+      "fm2-cards:bone-pup:1": 3,
+      "fm2-cards:grave-wisp:1": 3,
+      "fm2-cards:rattle-squire:1": 3,
+      "fm2-cards:crypt-keeper:1": 3,
+      "fm2-cards:hollow-knight:1": 3,
+      "fm2-cards:wailing-banshee:1": 3,
+      "fm2-cards:revenant-lord:1": 2,
+      "fm2-cards:sepulchre-golem:1": 2,
+      "fm2-cards:wraith-king:1": 1,
+      "fm2-cards:bone-dragon-overlord:1": 1,
+      "99": 3,
+      "368": 3,
+      "149": 3,
+      "119": 3,
+      "112": 3,
+      "359": 1
+    }
+  },
+  "drops": {
+    "kael": {
+      "pow": {
+        "replace": true,
+        "fm2-cards:ash-sparrow:1": 20,
+        "fm2-cards:pebble-raptor:1": 20,
+        "fm2-cards:spark-beetle:1": 20,
+        "fm2-cards:ember-kindler:1": 20,
+        "fm2-cards:magma-raptor:1": 20,
+        "fm2-cards:ashfeather-hawk:1": 20,
+        "fm2-cards:obsidian-colossus:1": 8,
+        "fm2-cards:blazing-wyvern:1": 8
+      },
+      "bcd": {
+        "replace": true,
+        "fm2-cards:ash-sparrow:1": 30,
+        "fm2-cards:pebble-raptor:1": 30,
+        "fm2-cards:spark-beetle:1": 30,
+        "fm2-cards:ember-kindler:1": 12,
+        "fm2-cards:magma-raptor:1": 12,
+        "fm2-cards:ashfeather-hawk:1": 8
+      },
+      "tec": {
+        "replace": true,
+        "fm2-cards:ember-kindler:1": 20,
+        "fm2-cards:magma-raptor:1": 20,
+        "fm2-cards:ashfeather-hawk:1": 20,
+        "fm2-cards:obsidian-colossus:1": 12,
+        "fm2-cards:blazing-wyvern:1": 12,
+        "fm2-cards:caldera-drake:1": 4
+      }
+    },
+    "marin": {
+      "pow": {
+        "replace": true,
+        "fm2-cards:foam-sprite:1": 20,
+        "fm2-cards:reef-crab:1": 20,
+        "fm2-cards:brine-eel:1": 20,
+        "fm2-cards:tide-priestess:1": 20,
+        "fm2-cards:coral-guardian:1": 20,
+        "fm2-cards:razor-barracuda:1": 20,
+        "fm2-cards:deepwater-serpent:1": 8,
+        "fm2-cards:abyssal-nautilus:1": 8
+      },
+      "bcd": {
+        "replace": true,
+        "fm2-cards:foam-sprite:1": 30,
+        "fm2-cards:reef-crab:1": 30,
+        "fm2-cards:brine-eel:1": 30,
+        "fm2-cards:tide-priestess:1": 12,
+        "fm2-cards:coral-guardian:1": 12,
+        "fm2-cards:razor-barracuda:1": 8
+      },
+      "tec": {
+        "replace": true,
+        "fm2-cards:tide-priestess:1": 20,
+        "fm2-cards:coral-guardian:1": 20,
+        "fm2-cards:razor-barracuda:1": 20,
+        "fm2-cards:deepwater-serpent:1": 12,
+        "fm2-cards:abyssal-nautilus:1": 12,
+        "fm2-cards:tidal-leviathan:1": 4
+      }
+    },
+    "brenn": {
+      "pow": {
+        "replace": true,
+        "fm2-cards:leaf-grub:1": 20,
+        "fm2-cards:thorn-sprout:1": 20,
+        "fm2-cards:mossback-beetle:1": 20,
+        "fm2-cards:bramble-mantis:1": 20,
+        "fm2-cards:grove-warden:1": 20,
+        "fm2-cards:spore-shaman:1": 20,
+        "fm2-cards:hornet-duke:1": 8,
+        "fm2-cards:ancient-treant:1": 8
+      },
+      "bcd": {
+        "replace": true,
+        "fm2-cards:leaf-grub:1": 30,
+        "fm2-cards:thorn-sprout:1": 30,
+        "fm2-cards:mossback-beetle:1": 30,
+        "fm2-cards:bramble-mantis:1": 12,
+        "fm2-cards:grove-warden:1": 12,
+        "fm2-cards:spore-shaman:1": 12
+      },
+      "tec": {
+        "replace": true,
+        "fm2-cards:bramble-mantis:1": 20,
+        "fm2-cards:grove-warden:1": 20,
+        "fm2-cards:spore-shaman:1": 20,
+        "fm2-cards:hornet-duke:1": 12,
+        "fm2-cards:ancient-treant:1": 12,
+        "fm2-cards:world-tree-guardian:1": 4
+      }
+    },
+    "morrow": {
+      "pow": {
+        "replace": true,
+        "fm2-cards:bone-pup:1": 20,
+        "fm2-cards:grave-wisp:1": 20,
+        "fm2-cards:rattle-squire:1": 20,
+        "fm2-cards:crypt-keeper:1": 20,
+        "fm2-cards:hollow-knight:1": 20,
+        "fm2-cards:wailing-banshee:1": 20,
+        "fm2-cards:revenant-lord:1": 8,
+        "fm2-cards:sepulchre-golem:1": 8
+      },
+      "bcd": {
+        "replace": true,
+        "fm2-cards:bone-pup:1": 30,
+        "fm2-cards:grave-wisp:1": 30,
+        "fm2-cards:rattle-squire:1": 30,
+        "fm2-cards:crypt-keeper:1": 12,
+        "fm2-cards:hollow-knight:1": 12,
+        "fm2-cards:wailing-banshee:1": 12
+      },
+      "tec": {
+        "replace": true,
+        "fm2-cards:crypt-keeper:1": 20,
+        "fm2-cards:hollow-knight:1": 20,
+        "fm2-cards:wailing-banshee:1": 20,
+        "fm2-cards:revenant-lord:1": 12,
+        "fm2-cards:sepulchre-golem:1": 12,
+        "fm2-cards:wraith-king:1": 4,
+        "fm2-cards:grim-harvester:1": 4
+      }
+    }
+  }
+}

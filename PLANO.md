@@ -52,7 +52,7 @@ Referências: `notes/more-cards.md`, `notes/gameplay-tables.md`, `notes/card-cat
 - [x] Expandir (plano aprovado): **4 blocos-base** (Ember, Tide, Grove, Crypt), de T1 até ~2300 ATK; testados em jogo os três primeiros, Crypt aguarda teste. **Decisão (26/10): cartas novas não têm efeitos de monstro.** Lista de receitas em `docs/fm2-fusoes.md`
 - [x] **2 cartas T5** (Mangrove Leviathan = Tidal Leviathan + World Tree Guardian; Infernal Lich Drake = Wraith King + Caldera Drake), aguardam teste
 - [x] **4 cartas híbridas** (Cinder Knight, Reefstone Sentinel, Thornwolf Alpha, Bone Dragon Overlord), aguardam teste
-- [ ] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2
+- [x] Listar quais cartas novas vão para os decks e drops de cada NPC da Fase 2 (`docs/fm2-fase2-npcs.md`)
 - [ ] Testar em duelo, ajustar números, depois expandir em lotes
 - [ ] Arte final das cartas (PNG 102x96, ou 408x384 para HD)
 
@@ -85,9 +85,9 @@ Base dos números: `docs/fm2-pesquisa-balanceamento.md`.
 
 Referências: `notes/more-duelists.md`, `notes/tower-mode.md`, `notes/card-drops.md`.
 
-- [ ] Mapear a progressão da campanha: ordem dos duelos principais e "saltos" de dificuldade
-- [ ] Definir os degraus: entre quais duelos entra cada NPC e qual faixa de cartas ele dá
-- [ ] Criar o mod `mods/fm2-duelists/` com 3–4 duelistas (deck, drops, retrato, condição de liberação), usando as cartas novas da Fase 1
+- [~] Mapear a progressão da campanha: ordem dos duelos principais e "saltos" de dificuldade (usei a tabela de força da pesquisa; falta conferir jogando)
+- [x] Definir os degraus: entre quais duelos entra cada NPC e qual faixa de cartas ele dá
+- [x] Criar o mod `mods/fm2-duelists/` com 3–4 duelistas (deck, drops, retrato, condição de liberação), usando as cartas novas da Fase 1
 - [ ] Calibrar: o NPC deve ajudar a passar o próximo chefe, não substituí-lo
 - [ ] Rodar a progressão do começo até o primeiro chefe com os NPCs
 
