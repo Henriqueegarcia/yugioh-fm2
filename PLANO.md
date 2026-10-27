@@ -95,9 +95,9 @@ Referências: `notes/more-duelists.md`, `notes/tower-mode.md`, `notes/card-drops
 
 Referências: `notes/card-packs.md`.
 
-- [ ] Desenhar a economia: StarChips ganhos por duelo/rank × preço por raridade
-- [ ] Booster packs por fase da campanha (desbloqueados conforme progresso), com pity e limite de cópias
-- [ ] Mod `mods/fm2-shop/` com os packs
+- [x] Desenhar a economia (`docs/fm2-fase3-loja.md`; números a calibrar jogando): StarChips ganhos por duelo/rank × preço por raridade
+- [x] Booster packs por fase da campanha (desbloqueados conforme progresso), com pity e limite de cópias
+- [x] Mod `mods/fm2-shop/` com os packs
 - [ ] (Extra, código) Compra de carta específica, venda e troca com regras próprias
 
 ## Fase 4 — Mundo 2D estilo Stardew (objetivo 4)

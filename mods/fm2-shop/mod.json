@@ -1,0 +1,367 @@
+{
+  "id": "fm2-shop",
+  "name": "FM 2 Shop",
+  "version": "0.1",
+  "author": "FM 2",
+  "description": "Booster packs for the FM 2 card lines, sold on the Password screen behind the triangle button, and a better StarChip prize for each win.",
+  "enabled": true,
+  "min_api": 16,
+  "game": "slus_01411",
+  "limits": {
+    "starchip_prize": {
+      "S": 10,
+      "A": 8,
+      "B": 5,
+      "C": 3,
+      "D": 2
+    }
+  },
+  "packs": [
+    {
+      "id": "ember-seeds",
+      "name": "Ember Seeds",
+      "description": "5 cards of the Ember\nline: mostly basic.",
+      "price": 25,
+      "count": 5,
+      "tiers": {
+        "common": {
+          "odds": 850,
+          "cards": {
+            "fm2-cards:pebble-raptor:1": 1,
+            "fm2-cards:spark-beetle:1": 1,
+            "fm2-cards:ash-sparrow:1": 1
+          }
+        },
+        "uncommon": {
+          "odds": 150,
+          "label": "UNCOMMON",
+          "color": 1,
+          "cards": {
+            "fm2-cards:ember-kindler:1": 1,
+            "fm2-cards:ashfeather-hawk:1": 1,
+            "fm2-cards:magma-raptor:1": 1
+          }
+        }
+      },
+      "max_copies": 3,
+      "duplicates": "allow",
+      "cover": "fm2-cards:pebble-raptor:1"
+    },
+    {
+      "id": "ember-forge",
+      "name": "Ember Forge",
+      "description": "4 cards of the Ember\nline: fusion fuel.",
+      "price": 90,
+      "count": 4,
+      "tiers": {
+        "common": {
+          "odds": 800,
+          "cards": {
+            "fm2-cards:ember-kindler:1": 1,
+            "fm2-cards:ashfeather-hawk:1": 1,
+            "fm2-cards:magma-raptor:1": 1
+          }
+        },
+        "rare": {
+          "odds": 190,
+          "label": "RARE!",
+          "color": 2,
+          "cards": {
+            "fm2-cards:blazing-wyvern:1": 1,
+            "fm2-cards:obsidian-colossus:1": 1
+          }
+        },
+        "epic": {
+          "odds": 10,
+          "label": "EPIC!!",
+          "color": 1,
+          "cards": {
+            "fm2-cards:caldera-drake:1": 1
+          },
+          "reveal": "flip"
+        }
+      },
+      "pity": {
+        "rare": 6
+      },
+      "max_copies": 3,
+      "cover": "fm2-cards:caldera-drake:1"
+    },
+    {
+      "id": "tide-seeds",
+      "name": "Tide Seeds",
+      "description": "5 cards of the Tide\nline: mostly basic.",
+      "price": 25,
+      "count": 5,
+      "tiers": {
+        "common": {
+          "odds": 850,
+          "cards": {
+            "fm2-cards:foam-sprite:1": 1,
+            "fm2-cards:reef-crab:1": 1,
+            "fm2-cards:brine-eel:1": 1
+          }
+        },
+        "uncommon": {
+          "odds": 150,
+          "label": "UNCOMMON",
+          "color": 1,
+          "cards": {
+            "fm2-cards:tide-priestess:1": 1,
+            "fm2-cards:coral-guardian:1": 1,
+            "fm2-cards:razor-barracuda:1": 1
+          }
+        }
+      },
+      "max_copies": 3,
+      "duplicates": "allow",
+      "cover": "fm2-cards:foam-sprite:1"
+    },
+    {
+      "id": "tide-forge",
+      "name": "Tide Forge",
+      "description": "4 cards of the Tide\nline: fusion fuel.",
+      "price": 90,
+      "count": 4,
+      "tiers": {
+        "common": {
+          "odds": 800,
+          "cards": {
+            "fm2-cards:tide-priestess:1": 1,
+            "fm2-cards:coral-guardian:1": 1,
+            "fm2-cards:razor-barracuda:1": 1
+          }
+        },
+        "rare": {
+          "odds": 190,
+          "label": "RARE!",
+          "color": 2,
+          "cards": {
+            "fm2-cards:deepwater-serpent:1": 1,
+            "fm2-cards:abyssal-nautilus:1": 1
+          }
+        },
+        "epic": {
+          "odds": 10,
+          "label": "EPIC!!",
+          "color": 1,
+          "cards": {
+            "fm2-cards:tidal-leviathan:1": 1,
+            "fm2-cards:maelstrom-serpent:1": 1
+          },
+          "reveal": "flip"
+        }
+      },
+      "pity": {
+        "rare": 6
+      },
+      "max_copies": 3,
+      "cover": "fm2-cards:tidal-leviathan:1"
+    },
+    {
+      "id": "grove-seeds",
+      "name": "Grove Seeds",
+      "description": "5 cards of the Grove\nline: mostly basic.",
+      "price": 25,
+      "count": 5,
+      "tiers": {
+        "common": {
+          "odds": 850,
+          "cards": {
+            "fm2-cards:leaf-grub:1": 1,
+            "fm2-cards:thorn-sprout:1": 1,
+            "fm2-cards:mossback-beetle:1": 1
+          }
+        },
+        "uncommon": {
+          "odds": 150,
+          "label": "UNCOMMON",
+          "color": 1,
+          "cards": {
+            "fm2-cards:bramble-mantis:1": 1,
+            "fm2-cards:grove-warden:1": 1,
+            "fm2-cards:spore-shaman:1": 1
+          }
+        }
+      },
+      "max_copies": 3,
+      "duplicates": "allow",
+      "cover": "fm2-cards:leaf-grub:1"
+    },
+    {
+      "id": "grove-forge",
+      "name": "Grove Forge",
+      "description": "4 cards of the Grove\nline: fusion fuel.",
+      "price": 90,
+      "count": 4,
+      "tiers": {
+        "common": {
+          "odds": 800,
+          "cards": {
+            "fm2-cards:bramble-mantis:1": 1,
+            "fm2-cards:grove-warden:1": 1,
+            "fm2-cards:spore-shaman:1": 1
+          }
+        },
+        "rare": {
+          "odds": 190,
+          "label": "RARE!",
+          "color": 2,
+          "cards": {
+            "fm2-cards:hornet-duke:1": 1,
+            "fm2-cards:ancient-treant:1": 1
+          }
+        },
+        "epic": {
+          "odds": 10,
+          "label": "EPIC!!",
+          "color": 1,
+          "cards": {
+            "fm2-cards:emperor-scarab:1": 1,
+            "fm2-cards:world-tree-guardian:1": 1
+          },
+          "reveal": "flip"
+        }
+      },
+      "pity": {
+        "rare": 6
+      },
+      "max_copies": 3,
+      "cover": "fm2-cards:emperor-scarab:1"
+    },
+    {
+      "id": "crypt-seeds",
+      "name": "Crypt Seeds",
+      "description": "5 cards of the Crypt\nline: mostly basic.",
+      "price": 25,
+      "count": 5,
+      "tiers": {
+        "common": {
+          "odds": 850,
+          "cards": {
+            "fm2-cards:bone-pup:1": 1,
+            "fm2-cards:grave-wisp:1": 1,
+            "fm2-cards:rattle-squire:1": 1
+          }
+        },
+        "uncommon": {
+          "odds": 150,
+          "label": "UNCOMMON",
+          "color": 1,
+          "cards": {
+            "fm2-cards:crypt-keeper:1": 1,
+            "fm2-cards:hollow-knight:1": 1,
+            "fm2-cards:wailing-banshee:1": 1
+          }
+        }
+      },
+      "max_copies": 3,
+      "duplicates": "allow",
+      "cover": "fm2-cards:bone-pup:1"
+    },
+    {
+      "id": "crypt-forge",
+      "name": "Crypt Forge",
+      "description": "4 cards of the Crypt\nline: fusion fuel.",
+      "price": 90,
+      "count": 4,
+      "tiers": {
+        "common": {
+          "odds": 800,
+          "cards": {
+            "fm2-cards:crypt-keeper:1": 1,
+            "fm2-cards:hollow-knight:1": 1,
+            "fm2-cards:wailing-banshee:1": 1
+          }
+        },
+        "rare": {
+          "odds": 190,
+          "label": "RARE!",
+          "color": 2,
+          "cards": {
+            "fm2-cards:revenant-lord:1": 1,
+            "fm2-cards:sepulchre-golem:1": 1
+          }
+        },
+        "epic": {
+          "odds": 10,
+          "label": "EPIC!!",
+          "color": 1,
+          "cards": {
+            "fm2-cards:wraith-king:1": 1,
+            "fm2-cards:grim-harvester:1": 1
+          },
+          "reveal": "flip"
+        }
+      },
+      "pity": {
+        "rare": 6
+      },
+      "max_copies": 3,
+      "cover": "fm2-cards:wraith-king:1"
+    },
+    {
+      "id": "hybrid-crate",
+      "name": "Hybrid Crate",
+      "description": "3 cards, tier 3: all\nlines and hybrids.",
+      "price": 150,
+      "count": 3,
+      "tiers": {
+        "common": {
+          "odds": 900,
+          "cards": {
+            "fm2-cards:blazing-wyvern:1": 1,
+            "fm2-cards:obsidian-colossus:1": 1,
+            "fm2-cards:deepwater-serpent:1": 1,
+            "fm2-cards:abyssal-nautilus:1": 1,
+            "fm2-cards:hornet-duke:1": 1,
+            "fm2-cards:ancient-treant:1": 1,
+            "fm2-cards:revenant-lord:1": 1,
+            "fm2-cards:sepulchre-golem:1": 1,
+            "fm2-cards:cinder-knight:1": 1,
+            "fm2-cards:reefstone-sentinel:1": 1,
+            "fm2-cards:thornwolf-alpha:1": 1
+          }
+        },
+        "rare": {
+          "odds": 100,
+          "label": "RARE!",
+          "color": 2,
+          "cards": {
+            "fm2-cards:bone-dragon-overlord:1": 1
+          }
+        }
+      },
+      "pity": {
+        "rare": 8
+      },
+      "max_copies": 3,
+      "cover": "fm2-cards:bone-dragon-overlord:1"
+    },
+    {
+      "id": "legend-chest",
+      "name": "Legend Chest",
+      "description": "2 cards, tier 4. Five\nchests a save.",
+      "price": 400,
+      "count": 2,
+      "cards": {
+        "fm2-cards:caldera-drake:1": 1,
+        "fm2-cards:tidal-leviathan:1": 1,
+        "fm2-cards:maelstrom-serpent:1": 1,
+        "fm2-cards:emperor-scarab:1": 1,
+        "fm2-cards:world-tree-guardian:1": 1,
+        "fm2-cards:wraith-king:1": 1,
+        "fm2-cards:grim-harvester:1": 1,
+        "fm2-cards:bone-dragon-overlord:1": 1
+      },
+      "stock": 5,
+      "max_copies": 3,
+      "duplicates": "unique_in_pack",
+      "cover": "fm2-cards:mangrove-leviathan:1"
+    }
+  ],
+  "pack_shop": {
+    "password": "both",
+    "when_nothing_left": "refuse"
+  }
+}
