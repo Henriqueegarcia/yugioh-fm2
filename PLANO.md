@@ -104,6 +104,7 @@ Referências: `notes/card-packs.md`.
 
 Referências: `notes/modding.md` (Code mods, API 4: substituir/envolver funções do jogo).
 
+- [~] Pesquisa feita (27/10): o mod de código só desenha texto e retângulos (sem imagens); duelo se inicia como a Torre faz (`func_80024DC8`); compilador de mods funciona. Ver `docs/fm2-fase4-pesquisa.md`
 - [ ] Escolher arte: tileset e sprites livres (CC0) ou arte própria. **Não** usar assets do Stardew
 - [ ] Prova de conceito: tela 2D aberta por um item do menu, personagem andando com colisão
 - [ ] NPCs no mapa: interagir → diálogo → iniciar duelo (reaproveitando os duelistas da Fase 2)
