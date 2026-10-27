@@ -1,7 +1,7 @@
 # FM 2 - Fase 2: NPCs intermediários
 
 Mod `mods/fm2-duelists/` (gerado por `tools/fm2/gen_duelists.py`; edite o script, não os JSON).
-São 4 duelistas novos no **Duelo Livre** (casas 40-43 da grade, página 2), um por linha de cartas.
+São 10 duelistas novos no **Duelo Livre** (casas 40-49 da grade, páginas 2), os 4 primeiros um por linha de cartas e os 6 do segundo grupo entre eles e no fim.
 Cada um só aparece quando a campanha libera um duelista original (flag `0x6E0 + n`).
 
 | NPC | Linha | Aparece depois de | Joga como (IA/base) | Deck (40 cartas fixas) |
@@ -10,6 +10,17 @@ Cada um só aparece quando a campanha libera um duelista original (flag `0x6E0 +
 | Marin | Tide (água) | Mai Valentine (11) | Mai Valentine | 21 cartas Tide até T3 + 19 de apoio |
 | Brenn | Grove (planta/inseto) | Kaiba (17) | Weevil Underwood | 23 cartas Grove até T4 + 17 de apoio |
 | Morrow | Crypt (mortos-vivos) | Forest Mage (23) | High Mage Atenza | 22 cartas Crypt até T4 + 18 de apoio |
+
+### Segundo grupo (casas 44-49)
+
+| NPC | Papel | Aparece depois de | IA como | Cartas |
+|---|---|---|---|---|
+| Pip | iniciante: T1 de todas as linhas | Teana (2) | Villager 1 | T1 das 4 linhas; drops T1 e 3 T2 chave |
+| Hana | Ember + Grove | Rex Raptor (9) | Rex Raptor | T1/T2 das duas; drops até T3 |
+| Ignis | Ember + Crypt | Yami Bakura (14) | Yami Bakura | T1-T3 + Caldera Drake; drops T4 (Caldera, Wraith King, Grim Harvester) e híbridas Cinder Knight/Bone Dragon Overlord |
+| Coral | Tide + Grove | Ocean Mage (21) | Ocean Mage | T1-T3 + 4 T4; drops T3, T4 e híbridas Reefstone Sentinel/Thornwolf Alpha |
+| Vesper | todas as linhas, fim de jogo | Seto 2nd (32) | Seto 2nd | T3 x2 + T4 de todas; drops T3/T4 |
+| Orin | chefe: deck com as 3 T5 | Seto 3rd (36) | Seto 3rd | T3, T4 e T5; drops T3/T4 (as T5 nunca caem) |
 
 ## Drops (só cartas do próprio bloco)
 

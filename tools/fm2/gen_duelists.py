@@ -7,6 +7,7 @@ Rodar da raiz do repo:  python tools/fm2/gen_duelists.py   (precisa de Pillow)
 import json
 
 import gen_art
+import gen_cards
 import icon_map
 from gen_cards import ROOT, load_retail
 
@@ -19,6 +20,31 @@ NON_MONSTER = ("Magic", "Trap", "Ritual", "Equip")
 
 def C(card_id):
     return f"fm2-cards:{card_id}:1"
+
+
+def _block_of():
+    return {c["id"]: blk.NAME for blk in gen_cards.BLOCKS for c in blk.CARDS}
+
+
+def ids(blocks, tiers, skip=()):
+    """Ids das cartas novas dos blocos e tiers dados (na ordem do gerador)."""
+    owner = _block_of()
+    return [c["id"] for c in gen_cards.CARDS
+            if owner[c["id"]] in blocks and c["tier"] in tiers and c["id"] not in skip]
+
+
+def D(*parts):
+    """(ids, valor) -> {id: valor}: monta decks (copias) e pools de drop (pesos)."""
+    out = {}
+    for group, value in parts:
+        for i in group:
+            out[i] = value
+    return out
+
+
+ALL = ("Light", "Dark", "Earth", "Water", "Fire", "Wind")
+LINES = ("Ember", "Tide", "Grove", "Crypt")
+HYBRIDS = ("Hibridas",)
 
 
 # gate = duelista da campanha cuja liberacao no Duelo Livre abre o NPC (flag 0x6E0 + n)
@@ -68,6 +94,58 @@ NPCS = [
               "hollow-knight": 20, "wailing-banshee": 20, "revenant-lord": 8, "sepulchre-golem": 8},
          tec={"crypt-keeper": 20, "hollow-knight": 20, "wailing-banshee": 20, "revenant-lord": 12,
               "sepulchre-golem": 12, "wraith-king": 4, "grim-harvester": 4}),
+    # ---- segundo grupo: degraus entre os quatro primeiros e chefes de fim de jogo ----
+    dict(id="pip", name="Pip", base="Villager 1", gate=2, slot=44,
+         icon="delapouite/baby-face", colors=((255, 225, 140), (150, 90, 40)),
+         deck=D((ids(LINES, [1]), 2)),
+         filler=dict(attrs=ALL, atk=(300, 800)),
+         bcd=D((ids(LINES, [1]), 20)),
+         pow=D((ids(LINES, [1]), 16), (["magma-raptor", "ember-kindler", "spore-shaman"], 8)),
+         tec=D((ids(LINES, [1]), 16), (["magma-raptor", "ember-kindler", "spore-shaman"], 8))),
+    dict(id="hana", name="Hana", base="Rex Raptor", gate=9, slot=45,
+         icon="cathelineau/witch-face", colors=((200, 235, 120), (150, 60, 30)),
+         deck=D((ids(["Ember", "Grove"], [1]), 3), (ids(["Ember", "Grove"], [2]), 2)),
+         filler=dict(attrs=("Fire", "Earth", "Wind"), atk=(900, 1500)),
+         bcd=D((ids(["Ember", "Grove"], [1]), 20), (ids(["Ember", "Grove"], [2]), 8)),
+         pow=D((ids(["Ember", "Grove"], [1]), 12), (ids(["Ember", "Grove"], [2]), 16),
+               (["blazing-wyvern", "hornet-duke"], 6)),
+         tec=D((ids(["Ember", "Grove"], [2]), 16), (["blazing-wyvern", "hornet-duke", "obsidian-colossus",
+                                                   "ancient-treant"], 12))),
+    dict(id="ignis", name="Ignis", base="Yami Bakura", gate=14, slot=46,
+         icon="darkzaitzev/hooded-assassin", colors=((255, 110, 80), (50, 10, 70)),
+         deck=D((ids(["Ember", "Crypt"], [1]), 2), (ids(["Ember", "Crypt"], [2]), 2),
+                (ids(["Ember", "Crypt"], [3]), 2), (["caldera-drake"], 1)),
+         filler=dict(attrs=("Fire", "Dark"), atk=(1200, 1800)),
+         bcd=D((ids(["Ember", "Crypt"], [1]), 12), (ids(["Ember", "Crypt"], [2]), 12)),
+         pow=D((ids(["Ember", "Crypt"], [2]), 16), (ids(["Ember", "Crypt"], [3]), 10), (["cinder-knight"], 8)),
+         tec=D((ids(["Ember", "Crypt"], [3]), 12), (["caldera-drake", "wraith-king", "grim-harvester"], 5),
+               (["bone-dragon-overlord", "cinder-knight"], 8))),
+    dict(id="coral", name="Coral", base="Ocean Mage", gate=21, slot=47,
+         icon="delapouite/viking-head", colors=((90, 210, 170), (20, 90, 60)),
+         deck=D((ids(["Tide", "Grove"], [1]), 2), (ids(["Tide", "Grove"], [2]), 2),
+                (ids(["Tide", "Grove"], [3]), 2),
+                (["tidal-leviathan", "maelstrom-serpent", "world-tree-guardian", "emperor-scarab"], 1)),
+         filler=dict(attrs=("Water", "Earth"), atk=(1300, 1900)),
+         bcd=D((ids(["Tide", "Grove"], [1]), 12), (ids(["Tide", "Grove"], [2]), 10)),
+         pow=D((ids(["Tide", "Grove"], [2]), 16), (ids(["Tide", "Grove"], [3]), 10),
+               (["reefstone-sentinel", "thornwolf-alpha"], 8)),
+         tec=D((ids(["Tide", "Grove"], [3]), 12),
+               (["tidal-leviathan", "maelstrom-serpent", "world-tree-guardian", "emperor-scarab"], 5))),
+    dict(id="vesper", name="Vesper", base="Seto 2nd", gate=32, slot=48,
+         icon="cathelineau/old-king", colors=((235, 215, 150), (90, 60, 30)),
+         deck=D((ids(LINES + HYBRIDS, [3]), 2), (ids(LINES + HYBRIDS, [4]), 1)),
+         filler=dict(attrs=ALL, atk=(1600, 2100)),
+         bcd=D((ids(LINES, [2]), 8), (ids(LINES, [3]), 4)),
+         pow=D((ids(LINES + HYBRIDS, [3]), 8), (ids(LINES, [4]), 3)),
+         tec=D((ids(LINES + HYBRIDS, [3]), 10), (ids(LINES + HYBRIDS, [4]), 6))),
+    dict(id="orin", name="Orin", base="Seto 3rd", gate=36, slot=49,
+         icon="delapouite/king-ju-mask", colors=((255, 210, 90), (90, 20, 20)),
+         deck=D((ids(LINES + HYBRIDS, [3]), 1), (ids(LINES + HYBRIDS, [4]), 2),
+                (ids(["Ember", "Mistura T5"], [5]), 1), (["mangrove-leviathan", "infernal-lich-drake"], 1)),
+         filler=dict(attrs=ALL, atk=(1800, 2500)),
+         bcd=D((ids(LINES + HYBRIDS, [3]), 6)),
+         pow=D((ids(LINES + HYBRIDS, [3]), 8), (ids(LINES + HYBRIDS, [4]), 4)),
+         tec=D((ids(LINES + HYBRIDS, [4]), 8))),
 ]
 
 
@@ -137,7 +215,7 @@ def main():
         "drops": drops,
     }
     (MOD / "mod.json").write_text(json.dumps(mod, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print("4 duelists ->", MOD)
+    print(len(NPCS), "duelists ->", MOD)
     for n, fill in notes:
         print(n["name"], "apoio:", ", ".join(f"{cat[k]['name']} x{v}" for k, v in fill.items()))
 
