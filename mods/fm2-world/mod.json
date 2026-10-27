@@ -1,0 +1,17 @@
+{
+  "id": "fm2-world",
+  "name": "FM 2 World",
+  "version": "0.1",
+  "author": "FM 2",
+  "description": "A small 2D world you walk around, with the FM 2 duelists standing in it. Open it with the WORLD button of the second title menu. Proof of concept: the map is drawn with plain rectangles.",
+  "min_api": 9,
+  "game": "slus_01411",
+  "library": "world",
+  "enabled": true,
+  "requires": [{"id": "fm2-duelists"}],
+  "menu": {
+    "buttons": [
+      {"id": "world", "menu": "second", "label": "WORLD", "action": "event", "value": 1}
+    ]
+  }
+}

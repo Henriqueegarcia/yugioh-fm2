@@ -106,10 +106,10 @@ Referências: `notes/modding.md` (Code mods, API 4: substituir/envolver funçõe
 
 - [~] Pesquisa feita (27/10): o mod de código só desenha texto e retângulos (sem imagens); duelo se inicia como a Torre faz (`func_80024DC8`); compilador de mods funciona. Ver `docs/fm2-fase4-pesquisa.md`
 - [ ] Escolher arte: tileset e sprites livres (CC0) ou arte própria. **Não** usar assets do Stardew
-- [ ] Prova de conceito: tela 2D aberta por um item do menu, personagem andando com colisão
-- [ ] NPCs no mapa: interagir → diálogo → iniciar duelo (reaproveitando os duelistas da Fase 2)
+- [~] Prova de conceito (`mods/fm2-world/`, aguardando teste do usuário): tela 2D aberta por um item do menu, personagem andando com colisão
+- [~] NPCs no mapa (os 10 já estão na prova de conceito): interagir → diálogo → iniciar duelo (reaproveitando os duelistas da Fase 2)
 - [ ] Ligar ao progresso da campanha (flags/save) sem quebrar a história original
-- [ ] Decidir: substituir o mapa original ou manter as duas navegações
+- [x] Decidir: substituir o mapa original ou manter as duas navegações — **conviver** (botão WORLD no segundo menu; decidido em 27/10)
 - [ ] Mais mapas, música, polimento
 
 ---
