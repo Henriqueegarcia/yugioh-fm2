@@ -1,57 +1,73 @@
 #!/usr/bin/env python3
-"""Arte provisoria das cartas do FM 2: degrade de uma cor, um disco claro no meio
-e uma fileira de pontos com o tier da carta (1 a 5). PNG em Python puro (sem PIL).
+"""Arte das cartas do FM 2: icone de game-icons.net (CC BY 3.0, ver docs/CREDITS-arte.md) pintado
+com as cores da carta, sobre fundo em degrade com brilho no centro. Precisa de Pillow
+(pip install pillow). Os icones baixados ficam em cache em tmp/art/icons (fora do git).
 Rodar da raiz do repo:  python tools/fm2/gen_art.py
 """
-import struct
-import zlib
+import urllib.request
 from pathlib import Path
+
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
+
+from gen_cards import CARDS
+from icon_map import ICONS
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "mods" / "fm2-cards" / "images"
+CACHE = ROOT / "tmp" / "art" / "icons"
 W, H = 408, 384  # 4x o tamanho de 102x96 (a arte HD do jogo)
 
-from gen_cards import CARDS  # cada carta traz colors=(cor de cima, cor de baixo) e tier
+
+def icon_mask(path):
+    CACHE.mkdir(parents=True, exist_ok=True)
+    f = CACHE / (path.replace("/", "__") + ".png")
+    if not f.exists():
+        url = f"https://game-icons.net/icons/ffffff/000000/1x1/{path}.png"
+        req = urllib.request.Request(url, headers={"User-Agent": "fm2-art/1.0"})
+        f.write_bytes(urllib.request.urlopen(req, timeout=30).read())
+    return Image.open(f).convert("L")  # branco = desenho
 
 
-def lerp(a, b, t):
-    return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
-
-
-def render(top, bottom, tier):
-    cx, cy, radius = W // 2, int(H * 0.45), int(H * 0.28)
-    light = lerp(top, (255, 255, 255), 0.45)
-    dot_r, gap = 14, 44
-    dots = [(cx + (i - (tier - 1) / 2) * gap, int(H * 0.88)) for i in range(tier)]
-    rows = []
+def gradient(top, bottom):
+    col = Image.new("RGB", (1, H))
     for y in range(H):
-        base = lerp(top, bottom, y / (H - 1))
-        row = bytearray([0])  # filtro PNG "none"
-        for x in range(W):
-            px = base
-            if (x - cx) ** 2 + (y - cy) ** 2 <= radius ** 2:
-                px = light
-            for dx, dy in dots:
-                if (x - dx) ** 2 + (y - dy) ** 2 <= dot_r ** 2:
-                    px = (255, 255, 255)
-            row += bytes(px)
-        rows.append(bytes(row))
-    return b"".join(rows)
+        t = y / (H - 1)
+        col.putpixel((0, y), tuple(int(top[i] + (bottom[i] - top[i]) * t) for i in range(3)))
+    return col.resize((W, H))
 
 
-def png(data):
-    def chunk(tag, body):
-        return struct.pack(">I", len(body)) + tag + body + struct.pack(">I", zlib.crc32(tag + body))
-
-    header = struct.pack(">IIBBBBB", W, H, 8, 2, 0, 0, 0)
-    return b"\x89PNG\r\n\x1a\n" + chunk(b"IHDR", header) + chunk(b"IDAT", zlib.compress(data, 9)) + chunk(b"IEND", b"")
+def render(card):
+    top, bottom = card["colors"]
+    img = gradient(top, bottom)
+    # brilho radial no centro
+    glow = Image.new("L", (W, H), 0)
+    d = ImageDraw.Draw(glow)
+    cx, cy, r = W // 2, int(H * 0.5), int(H * 0.42)
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=170)
+    glow = glow.filter(ImageFilter.GaussianBlur(52))
+    light = tuple(min(255, int(c * 0.5 + 255 * 0.5)) for c in top)
+    img = Image.composite(Image.new("RGB", (W, H), light), img, glow.point(lambda v: int(v * 0.75)))
+    # icone: contorno escuro, sombra e preenchimento claro com degrade
+    size = int(H * 0.80)
+    mask = ImageOps.autocontrast(icon_mask(ICONS[card["id"]])).resize((size, size), Image.LANCZOS)
+    layer = Image.new("L", (W, H), 0)
+    ox, oy = (W - size) // 2, (H - size) // 2 - 4
+    layer.paste(mask, (ox, oy))
+    outline = layer.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(1.5))
+    shadow = ImageChops.offset(outline, 8, 10).filter(ImageFilter.GaussianBlur(7))
+    img = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, shadow.point(lambda v: int(v * 0.55)))
+    img = Image.composite(Image.new("RGB", (W, H), tuple(int(c * 0.18) for c in bottom)), img, outline)
+    fill = ImageChops.multiply(gradient((255, 255, 255), tuple(min(255, c + 90) for c in top)), Image.new("RGB", (W, H), (255, 255, 255)))
+    img = Image.composite(fill, img, layer)
+    # moldura fina
+    ImageDraw.Draw(img).rectangle((0, 0, W - 1, H - 1), outline=tuple(int(c * 0.35) for c in bottom), width=6)
+    return img
 
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for c in CARDS:
-        top, bottom = c["colors"]
-        (OUT / f"{c['id']}.png").write_bytes(png(render(top, bottom, c["tier"])))
+        render(c).save(OUT / f"{c['id']}.png", optimize=True)
     print(f"{len(CARDS)} images -> {OUT}")
 
 
